@@ -1,0 +1,2 @@
+# Unidad 20 — Normalización 1FN, 2FN y 3FN
+1FN: valores atómicos según modelo. 2FN elimina dependencias parciales respecto de clave compuesta. 3FN elimina dependencias transitivas relevantes. Normalizar no significa dividir tablas sin criterio. **Reto:** normaliza dataset y conserva reglas.
