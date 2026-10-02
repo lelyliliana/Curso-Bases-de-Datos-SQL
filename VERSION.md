@@ -23,6 +23,6 @@ Estado: **completa, autodidacta y disponible**.
 ## Criterio de cierre
 El curso cubre desde fundamentos relacionales hasta diseño, consulta, integridad, rendimiento y administración básica con PostgreSQL.
 
-## Estándar autodidacta
+## Experiencia de aprendizaje
 
-Las unidades se desarrollan para que una persona pueda aprender sin acompañamiento docente: objetivos, explicación desde cero, ejemplos resueltos, práctica guiada, errores frecuentes, ejercicios, reto, autoevaluación y checklist de avance.
+Cada unidad permite avanzar de forma autónoma mediante objetivos claros, explicaciones desde cero, ejemplos resueltos, práctica guiada, errores frecuentes, ejercicios, retos, autoevaluaciones y listas de comprobación.
