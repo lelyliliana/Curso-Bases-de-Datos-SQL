@@ -1,0 +1,2 @@
+# Unidad 01 — Modelo relacional
+Relación, tupla, atributo y dominio. Una tabla representa una relación bajo ciertas reglas; el orden físico de filas no forma parte del significado relacional. **Reto:** representa un conjunto de estudiantes y cursos como relaciones.
