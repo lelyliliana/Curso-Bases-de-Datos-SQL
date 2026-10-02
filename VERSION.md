@@ -1,6 +1,6 @@
 # Versión 1.0
 
-Estado: **completa y disponible**.
+Estado: **completa, autodidacta y disponible**.
 
 ## Alcance
 - 33 unidades en siete niveles;
@@ -22,3 +22,7 @@ Estado: **completa y disponible**.
 
 ## Criterio de cierre
 El curso cubre desde fundamentos relacionales hasta diseño, consulta, integridad, rendimiento y administración básica con PostgreSQL.
+
+## Estándar autodidacta
+
+Las unidades se desarrollan para que una persona pueda aprender sin acompañamiento docente: objetivos, explicación desde cero, ejemplos resueltos, práctica guiada, errores frecuentes, ejercicios, reto, autoevaluación y checklist de avance.
