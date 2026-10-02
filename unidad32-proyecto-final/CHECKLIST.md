@@ -1,0 +1,15 @@
+# Checklist
+- [ ] DER.
+- [ ] PK/FK.
+- [ ] NOT NULL/UNIQUE/CHECK donde aplica.
+- [ ] Tipos adecuados.
+- [ ] Sin datos multivaluados improvisados.
+- [ ] Scripts reproducibles.
+- [ ] Datos de prueba.
+- [ ] JOIN/agregaciones.
+- [ ] Transacción.
+- [ ] Índices justificados.
+- [ ] EXPLAIN revisado.
+- [ ] Roles mínimos.
+- [ ] Backup restaurado en prueba.
+- [ ] README.
