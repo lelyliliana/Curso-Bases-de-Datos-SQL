@@ -1,0 +1,2 @@
+# Unidad 18 — Diagrama entidad-relación
+Modela entidades, atributos, cardinalidad y opcionalidad antes de tablas. El DER conceptual no debe contaminarse prematuramente con detalles físicos. **Reto:** sistema de ventas completo.
