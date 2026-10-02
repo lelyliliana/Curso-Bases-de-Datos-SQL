@@ -1,0 +1,2 @@
+# Unidad 19 — Dependencias y anomalías
+Anomalías de inserción, actualización y eliminación aparecen cuando hechos diferentes se mezclan indebidamente. Dependencia funcional X→Y. **Reto:** detecta anomalías en tabla plana de pedidos.
