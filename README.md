@@ -1,5 +1,7 @@
 # Curso de Bases de Datos y SQL desde cero
 
+**Versión 1.0**
+
 Curso abierto para aprender **bases de datos relacionales y SQL**, desde el modelado de información hasta consultas, integridad, transacciones, índices y optimización.
 
 **Motor de referencia:** PostgreSQL.
