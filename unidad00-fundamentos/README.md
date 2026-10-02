@@ -1,0 +1,2 @@
+# Unidad 00 — Datos, información y bases de datos
+Una BD organiza datos para consulta, actualización e integridad. Diferencia dato, información, DBMS y base de datos. Compara archivos dispersos vs sistema gestionado. **Reto:** identifica problemas de duplicación e inconsistencia en un registro manual.
