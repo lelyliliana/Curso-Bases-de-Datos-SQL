@@ -1,0 +1,2 @@
+# Unidad 02 — Entidades, atributos y relaciones
+Identifica entidades, atributos y cardinalidades 1:1, 1:N, N:M. No conviertas cada sustantivo automáticamente en tabla. **Reto:** modela biblioteca, préstamos y ejemplares.
