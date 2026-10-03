@@ -1,5 +1,7 @@
 # Unidad 03 — Claves y restricciones
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
+
 ## Qué aprenderás
 - comprender claves primarias, candidatas y foráneas;
 - usar unicidad, obligatoriedad y reglas de dominio;
@@ -141,3 +143,12 @@ Para un sistema de citas médicas define reglas que la base podría proteger. Se
 - [ ] Puedo proponer CHECK.
 
 Continúa con PostgreSQL.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 02 — Entidades, atributos y relaciones](../unidad02-modelado/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 04 — PostgreSQL y entorno](../unidad04-postgresql/README.md)

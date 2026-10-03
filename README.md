@@ -1,5 +1,11 @@
 # Curso de Bases de Datos y SQL desde cero
 
+**[Comenzar el curso: Unidad 00 — Datos, información y bases de datos](unidad00-fundamentos/README.md)**
+
+Puedes leer las lecciones aquí sin conocer GitHub. Al terminar cada unidad, usa **Siguiente unidad** para avanzar; **Unidad anterior** y **Volver al índice** te permiten regresar.
+
+[Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
+
 **Versión 1.0**
 
 Curso abierto para aprender **bases de datos relacionales y SQL**, desde el modelado de información hasta consultas, integridad, transacciones, índices y optimización.

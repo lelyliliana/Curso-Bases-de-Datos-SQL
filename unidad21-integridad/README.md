@@ -1,5 +1,7 @@
 # Unidad 21 — Integridad referencial
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
+
 ## Qué aprenderás
 Comprender qué garantiza una FK y decidir conscientemente qué debe ocurrir al modificar/eliminar filas relacionadas.
 
@@ -105,3 +107,12 @@ Construye una matriz de FK del proyecto final con acción de borrado y justifica
 - [ ] Protejo historial conscientemente.
 
 Continúa con vistas.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 20 — Normalización: 1FN, 2FN y 3FN](../unidad20-normalizacion/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 22 — Vistas](../unidad22-vistas/README.md)

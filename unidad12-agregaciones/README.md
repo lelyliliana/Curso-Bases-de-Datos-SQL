@@ -1,5 +1,7 @@
 # Unidad 12 — Agregaciones
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
+
 ## Qué aprenderás
 Resumir muchas filas con COUNT, SUM, AVG, MIN y MAX y comprender el efecto de NULL.
 
@@ -98,3 +100,12 @@ Define cinco métricas. Para cada una explica población, numerador y denominado
 - [ ] Defino la métrica antes del SQL.
 
 Continúa con GROUP BY.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 11 — Funciones y expresiones](../unidad11-funciones/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 13 — GROUP BY y HAVING](../unidad13-group-having/README.md)

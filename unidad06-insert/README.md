@@ -1,5 +1,7 @@
 # Unidad 06 — INSERT: agregar datos
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
+
 ## Qué aprenderás
 Insertar una o varias filas, usar DEFAULT y RETURNING y reconocer errores de integridad.
 
@@ -84,3 +86,12 @@ Carga categoria, producto, cliente, pedido y detalle. Dibuja primero el orden de
 - [ ] Diagnostico errores de integridad.
 
 Continúa con SELECT.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 05 — CREATE TABLE y tipos de datos](../unidad05-create-table/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 07 — SELECT: consultar datos](../unidad07-select/README.md)

@@ -1,5 +1,7 @@
 # Unidad 15 — Subconsultas y EXISTS
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
+
 ## Qué aprenderás
 Usar una consulta dentro de otra y elegir entre valor escalar, IN y EXISTS según la pregunta.
 
@@ -134,3 +136,12 @@ Resuelve “clientes que compraron al menos un producto de categoría Libros” 
 - [ ] Comparo alternativas.
 
 Continúa con CTE.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 14 — JOIN: combinar tablas](../unidad14-joins/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 16 — CTE: nombrar etapas de una consulta](../unidad16-cte/README.md)

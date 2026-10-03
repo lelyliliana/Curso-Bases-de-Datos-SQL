@@ -1,5 +1,7 @@
 # Unidad 01 — Modelo relacional
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
+
 ## Qué aprenderás
 - comprender relación, fila, columna y dominio;
 - distinguir una tabla visual de la idea matemática de relación;
@@ -153,3 +155,12 @@ No uses SQL.
 - [ ] Puedo detectar valores multivaluados improvisados.
 
 Continúa con **Unidad 02 — Entidades, atributos y relaciones**.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 00 — Datos, información y bases de datos](../unidad00-fundamentos/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 02 — Entidades, atributos y relaciones](../unidad02-modelado/README.md)

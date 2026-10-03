@@ -1,5 +1,7 @@
 # Unidad 32 — Proyecto final
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
+
 ## Propósito
 
 Demostrar que puedes pasar de un problema real a una base de datos reproducible, íntegra, consultable y operable.
@@ -191,3 +193,13 @@ Antes de declarar terminado:
 - ¿hay algún secreto/dato personal en el repositorio?
 
 Si una respuesta es dudosa, el proyecto aún no está terminado.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 31 — Taller integrador de SQL](../unidad31-taller/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+
+Llegaste a la última unidad. Revisa tu proyecto y la lista de comprobación antes de dar por terminado el curso.

@@ -1,5 +1,7 @@
 # Unidad 10 — UPDATE y DELETE
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
+
 ## Qué aprenderás
 Modificar y eliminar datos de forma controlada, comprobar el alcance de WHERE y utilizar transacciones para practicar con seguridad.
 
@@ -108,3 +110,12 @@ Diseña una operación de mantenimiento que cambie varias filas. Primero escribe
 - [ ] Interpreto errores de FK.
 
 Ya dominas el SQL esencial. Continúa con funciones y consultas agregadas.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 09 — ORDER BY, LIMIT y DISTINCT](../unidad09-order-limit/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 11 — Funciones y expresiones](../unidad11-funciones/README.md)

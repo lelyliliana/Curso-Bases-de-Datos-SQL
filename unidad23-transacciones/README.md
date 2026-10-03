@@ -1,5 +1,7 @@
 # Unidad 23 — Transacciones y ACID
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
+
 ## Qué aprenderás
 Agrupar operaciones como una unidad, usar COMMIT/ROLLBACK y comprender las propiedades ACID a través de situaciones concretas.
 
@@ -117,3 +119,12 @@ Diseña una operación de tres sentencias que deba ser todo-o-nada y explica qu�
 - [ ] Sé cuándo una operación debe agruparse.
 
 Continúa con concurrencia.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 22 — Vistas](../unidad22-vistas/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 24 — Concurrencia y aislamiento](../unidad24-concurrencia/README.md)

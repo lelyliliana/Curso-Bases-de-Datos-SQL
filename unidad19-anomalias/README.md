@@ -1,5 +1,7 @@
 # Unidad 19 — Dependencias y anomalías
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
+
 ## Qué aprenderás
 Detectar cuándo una tabla mezcla hechos distintos y comprender dependencias funcionales como base para normalizar.
 
@@ -110,3 +112,12 @@ Toma una hoja plana real o ficticia y escribe dependencias funcionales candidata
 - [ ] No separo tablas arbitrariamente.
 
 Continúa con normalización.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 18 — Diagrama entidad-relación](../unidad18-der/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 20 — Normalización: 1FN, 2FN y 3FN](../unidad20-normalizacion/README.md)

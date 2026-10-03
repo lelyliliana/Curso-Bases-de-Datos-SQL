@@ -1,5 +1,7 @@
 # Unidad 27 — Usuarios, roles y privilegios
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
+
 ## Qué aprenderás
 Comprender autenticación/autorización a nivel de base, crear roles y aplicar mínimo privilegio.
 
@@ -133,3 +135,12 @@ Justifica cada celda.
 - [ ] No versiono secretos.
 
 Continúa con importación/exportación.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 26 — EXPLAIN y planes de ejecución](../unidad26-explain/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 28 — Importación y exportación](../unidad28-import-export/README.md)

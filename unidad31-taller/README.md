@@ -1,5 +1,7 @@
 # Unidad 31 — Taller integrador de SQL
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
+
 Esta unidad cambia la dinámica: ya no te indica qué cláusula usar. Debes identificar la herramienta.
 
 ## Cómo trabajar
@@ -99,3 +101,12 @@ Antes del proyecto debes poder:
 - restaurar backup.
 
 Si algún punto todavía requiere copiar una solución sin comprenderla, vuelve a esa unidad antes del proyecto.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 30 — Calidad y limpieza de datos](../unidad30-calidad/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 32 — Proyecto final](../unidad32-proyecto-final/README.md)

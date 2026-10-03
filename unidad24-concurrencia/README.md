@@ -1,5 +1,7 @@
 # Unidad 24 — Concurrencia y aislamiento
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
+
 ## Qué aprenderás
 Comprender qué ocurre cuando varias transacciones trabajan al mismo tiempo, observar bloqueos y reconocer el propósito de los niveles de aislamiento.
 
@@ -113,3 +115,12 @@ Diseña un experimento de dos sesiones y registra línea temporal: sentencia, es
 - [ ] Evito transacciones innecesariamente largas.
 
 Continúa con índices.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 23 — Transacciones y ACID](../unidad23-transacciones/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 25 — Índices](../unidad25-indices/README.md)

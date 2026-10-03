@@ -1,5 +1,7 @@
 # Unidad 22 — Vistas
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
+
 ## Qué aprenderás
 Crear consultas reutilizables como objetos del esquema y distinguir vista normal de tabla y vista materializada.
 
@@ -93,3 +95,12 @@ Diseña una vista para un usuario de reportes que no deba acceder a todas las co
 - [ ] Uso vistas con propósito.
 
 Continúa con transacciones.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 21 — Integridad referencial](../unidad21-integridad/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 23 — Transacciones y ACID](../unidad23-transacciones/README.md)

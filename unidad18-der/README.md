@@ -1,5 +1,7 @@
 # Unidad 18 — Diagrama entidad-relación
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
+
 ## Qué aprenderás
 Pasar de un problema real a un modelo conceptual con entidades, relaciones, cardinalidad y opcionalidad.
 
@@ -119,3 +121,12 @@ Construye DER conceptual de un sistema de reservas y escribe diez reglas/supuest
 - [ ] Puedo justificar una entidad asociativa.
 
 Continúa con anomalías y dependencias.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 17 — Operaciones de conjuntos](../unidad17-conjuntos/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 19 — Dependencias y anomalías](../unidad19-anomalias/README.md)

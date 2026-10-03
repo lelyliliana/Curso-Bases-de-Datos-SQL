@@ -1,5 +1,7 @@
 # Unidad 07 — SELECT: consultar datos
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
+
 ## Qué aprenderás
 Seleccionar columnas, crear alias y expresiones y comprender que una consulta no modifica datos.
 
@@ -90,3 +92,12 @@ Diseña consultas distintas para catálogo público, inventario interno y factur
 - [ ] Distingo consultar de modificar.
 
 Continúa con WHERE.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 06 — INSERT: agregar datos](../unidad06-insert/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 08 — WHERE y operadores](../unidad08-where/README.md)

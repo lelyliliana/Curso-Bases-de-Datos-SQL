@@ -1,5 +1,7 @@
 # Unidad 17 — Operaciones de conjuntos
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
+
 ## Qué aprenderás
 Combinar resultados con UNION, UNION ALL, INTERSECT y EXCEPT.
 
@@ -133,3 +135,12 @@ Integra dos fuentes de clientes conservando procedencia. Decide si necesitas UNI
 - [ ] Elijo según significado del resultado.
 
 Has completado el bloque de consultas. Continúa con diseño y normalización.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 16 — CTE: nombrar etapas de una consulta](../unidad16-cte/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 18 — Diagrama entidad-relación](../unidad18-der/README.md)

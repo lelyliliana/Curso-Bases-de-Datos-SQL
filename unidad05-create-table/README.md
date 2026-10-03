@@ -1,5 +1,7 @@
 # Unidad 05 — CREATE TABLE y tipos de datos
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
+
 ## Qué aprenderás
 Crear tablas, elegir tipos y proteger reglas con restricciones.
 
@@ -102,3 +104,12 @@ Diseña categoria, producto y cliente para una tienda y justifica cada tipo.
 - [ ] Interpreto errores de restricciones.
 
 Continúa con INSERT.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 04 — PostgreSQL y entorno](../unidad04-postgresql/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 06 — INSERT: agregar datos](../unidad06-insert/README.md)

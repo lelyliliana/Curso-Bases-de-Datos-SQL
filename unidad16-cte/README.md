@@ -1,5 +1,7 @@
 # Unidad 16 — CTE: nombrar etapas de una consulta
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
+
 ## Qué aprenderás
 Usar WITH para dividir consultas complejas en pasos legibles y comprender que una CTE no implica automáticamente mejor rendimiento.
 
@@ -103,3 +105,12 @@ Construye un reporte de clientes con total pagado usando al menos dos etapas cla
 - [ ] No hago afirmaciones de rendimiento sin medir.
 
 Continúa con operaciones de conjuntos.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 15 — Subconsultas y EXISTS](../unidad15-subconsultas/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 17 — Operaciones de conjuntos](../unidad17-conjuntos/README.md)

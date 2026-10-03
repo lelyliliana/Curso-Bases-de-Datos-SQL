@@ -1,5 +1,7 @@
 # Unidad 13 — GROUP BY y HAVING
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
+
 ## Qué aprenderás
 Crear grupos, calcular métricas por grupo y distinguir WHERE de HAVING.
 
@@ -111,3 +113,12 @@ Escribe una consulta donde WHERE y HAVING sean ambos necesarios y explica cada e
 - [ ] Explico cada fila resultante.
 
 Continúa con JOIN.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 12 — Agregaciones](../unidad12-agregaciones/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 14 — JOIN: combinar tablas](../unidad14-joins/README.md)

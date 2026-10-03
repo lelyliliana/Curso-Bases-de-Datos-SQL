@@ -1,5 +1,7 @@
 # Unidad 26 — EXPLAIN y planes de ejecución
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
+
 ## Qué aprenderás
 Leer un plan básico, distinguir estimaciones de mediciones y utilizar EXPLAIN para comprobar hipótesis.
 
@@ -145,3 +147,12 @@ Conserva plan antes/después de una mejora y escribe una conclusión basada en e
 - [ ] Optimizo con evidencia.
 
 Has completado el bloque de diseño y funcionamiento. Continúa con administración básica.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 25 — Índices](../unidad25-indices/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 27 — Usuarios, roles y privilegios](../unidad27-seguridad/README.md)

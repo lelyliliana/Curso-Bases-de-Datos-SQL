@@ -1,5 +1,7 @@
 # Unidad 20 — Normalización: 1FN, 2FN y 3FN
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
+
 ## Qué aprenderás
 Normalizar un modelo paso a paso y, sobre todo, justificar cada separación.
 
@@ -129,3 +131,12 @@ Documenta una normalización completa mostrando antes, dependencias, después y 
 - [ ] Relaciono normalización con anomalías.
 
 Continúa con integridad referencial.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 19 — Dependencias y anomalías](../unidad19-anomalias/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 21 — Integridad referencial](../unidad21-integridad/README.md)

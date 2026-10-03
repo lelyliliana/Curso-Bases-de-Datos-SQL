@@ -1,5 +1,7 @@
 # Unidad 00 — Datos, información y bases de datos
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
+
 ## Qué aprenderás
 
 Al terminar podrás:
@@ -301,3 +303,11 @@ Debes poder marcar:
 - [ ] Puedo identificar problemas de duplicación e inconsistencia.
 
 Continúa con **Unidad 01 — Modelo relacional**.
+
+
+---
+
+## Continuar el curso
+
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 01 — Modelo relacional](../unidad01-modelo-relacional/README.md)

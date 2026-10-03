@@ -1,5 +1,7 @@
 # Unidad 14 — JOIN: combinar tablas
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
+
 ## Qué aprenderás
 Comprender por qué necesitamos JOIN, construir INNER/LEFT JOIN y razonar la cardinalidad antes de ejecutar.
 
@@ -180,3 +182,12 @@ Explica qué representa **una fila** del resultado.
 - [ ] No uso DISTINCT sin explicación.
 
 Continúa con subconsultas.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 13 — GROUP BY y HAVING](../unidad13-group-having/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 15 — Subconsultas y EXISTS](../unidad15-subconsultas/README.md)

@@ -1,5 +1,7 @@
 # Unidad 25 — Índices
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
+
 ## Qué aprenderás
 Comprender qué problema resuelve un índice, sus costos y por qué el optimizador puede decidir no usarlo.
 
@@ -121,3 +123,12 @@ Selecciona tres consultas reales, propone índices y formula qué evidencia espe
 - [ ] Parto de consultas reales.
 
 Continúa con EXPLAIN.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 24 — Concurrencia y aislamiento](../unidad24-concurrencia/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 26 — EXPLAIN y planes de ejecución](../unidad26-explain/README.md)

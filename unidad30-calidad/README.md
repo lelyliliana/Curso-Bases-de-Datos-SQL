@@ -1,5 +1,7 @@
 # Unidad 30 — Calidad y limpieza de datos
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
+
 ## Qué aprenderás
 Perfilar datos antes de corregirlos, definir reglas de calidad y mantener trazabilidad de las transformaciones.
 
@@ -147,3 +149,12 @@ Produce informe antes/después de limpieza con regla, cantidad, transformación 
 - [ ] Mido antes/después.
 
 Ahora estás listo para integrar lo aprendido.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 29 — Backup y restauración](../unidad29-backup/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 31 — Taller integrador de SQL](../unidad31-taller/README.md)

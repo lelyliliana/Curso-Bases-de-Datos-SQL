@@ -1,5 +1,7 @@
 # Unidad 11 — Funciones y expresiones
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
+
 ## Qué aprenderás
 Construir columnas calculadas, clasificar valores con CASE, tratar NULL con COALESCE y utilizar funciones de texto, números y fechas.
 
@@ -108,3 +110,12 @@ Genera un reporte legible de pedidos con columnas calculadas sin modificar las t
 - [ ] Distingo transformación de modificación.
 
 Continúa con agregaciones.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 10 — UPDATE y DELETE](../unidad10-update-delete/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 12 — Agregaciones](../unidad12-agregaciones/README.md)

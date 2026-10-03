@@ -1,5 +1,7 @@
 # Unidad 29 — Backup y restauración
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
+
 ## Qué aprenderás
 Comprender que una copia solo es confiable cuando puede restaurarse y realizar un ciclo básico con herramientas PostgreSQL.
 
@@ -119,3 +121,12 @@ Escribe procedimiento de recuperación de la tienda que otra persona pueda segui
 - [ ] Protejo datos.
 
 Continúa con calidad de datos.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 28 — Importación y exportación](../unidad28-import-export/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 30 — Calidad y limpieza de datos](../unidad30-calidad/README.md)

@@ -1,5 +1,7 @@
 # Unidad 28 — Importación y exportación
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
+
 ## Qué aprenderás
 Mover datos tabulares hacia/desde PostgreSQL, distinguir COPY de \copy y utilizar staging para validar datos externos.
 
@@ -139,3 +141,12 @@ Diseña pipeline staging para clientes con reporte de calidad y rechazadas.
 - [ ] Conservo trazabilidad.
 
 Continúa con backup.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 27 — Usuarios, roles y privilegios](../unidad27-seguridad/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 29 — Backup y restauración](../unidad29-backup/README.md)

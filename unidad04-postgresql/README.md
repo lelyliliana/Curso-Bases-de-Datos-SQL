@@ -1,5 +1,7 @@
 # Unidad 04 — PostgreSQL y entorno
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
+
 ## Qué aprenderás
 - distinguir PostgreSQL servidor, base, esquema y cliente;
 - conectarte;
@@ -179,3 +181,12 @@ No publiques contraseña.
 - [ ] Sé leer la categoría básica de un error.
 
 Ahora estás listo para escribir tu primera tabla en **Unidad 05**.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 03 — Claves y restricciones](../unidad03-claves/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 05 — CREATE TABLE y tipos de datos](../unidad05-create-table/README.md)

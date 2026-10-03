@@ -1,5 +1,7 @@
 # Unidad 09 — ORDER BY, LIMIT y DISTINCT
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
+
 ## Qué aprenderás
 Ordenar, limitar y eliminar duplicados del resultado de forma consciente.
 
@@ -72,3 +74,12 @@ Construye ranking determinista aunque existan empates.
 - [ ] Uso DISTINCT con intención.
 
 Continúa con UPDATE y DELETE.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 08 — WHERE y operadores](../unidad08-where/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 10 — UPDATE y DELETE](../unidad10-update-delete/README.md)

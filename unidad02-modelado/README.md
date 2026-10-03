@@ -1,5 +1,7 @@
 # Unidad 02 — Entidades, atributos y relaciones
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
+
 ## Qué aprenderás
 - identificar entidades;
 - distinguir entidad de atributo;
@@ -149,3 +151,12 @@ Escribe cinco preguntas que necesitarías hacer al responsable del negocio antes
 - [ ] No salto directamente a CREATE TABLE.
 
 Continúa con **Unidad 03 — Claves y restricciones**.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 01 — Modelo relacional](../unidad01-modelo-relacional/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 03 — Claves y restricciones](../unidad03-claves/README.md)

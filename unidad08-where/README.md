@@ -1,5 +1,7 @@
 # Unidad 08 — WHERE y operadores
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
+
 ## Qué aprenderás
 Filtrar filas con comparaciones, lógica, rangos, patrones y NULL.
 
@@ -94,3 +96,12 @@ Escribe cinco filtros de negocio y crea datos de frontera.
 - [ ] Manejo NULL.
 
 Continúa con ORDER BY.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 07 — SELECT: consultar datos](../unidad07-select/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 09 — ORDER BY, LIMIT y DISTINCT](../unidad09-order-limit/README.md)
