@@ -1,9 +1,13 @@
-# Unidad 06 — INSERT: agregar datos
+# Unidad 06: INSERT: agregar datos
 
 [Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
 
 ## Qué aprenderás
 Insertar una o varias filas, usar DEFAULT y RETURNING y reconocer errores de integridad.
+
+## Cómo usar los ejemplos de esta unidad
+
+Los ejemplos breves ilustran una idea y pueden usar un conjunto reducido de filas o una tabla independiente. Para ejecutarlos juntos sin conflictos, utiliza el laboratorio y la práctica de esta unidad sobre la [tienda de referencia](../docs/CASO_TIENDA.md). Sus scripts declaran la preparación, resultados y rollback. No vuelvas a crear las tablas de tienda ni repitas su carga para seguir un fragmento ilustrativo.
 
 # 1. Primera fila
 ```sql
@@ -90,8 +94,37 @@ Continúa con SELECT.
 
 ---
 
+## Laboratorio completo y lectura del resultado
+
+**Caso:** ¿Cómo insertar un padre y usar su identificador sin suponer cuál será el siguiente?
+
+RETURNING permite utilizar el ID que realmente se generó. No calcules MAX(id)+1: dos sesiones podrían obtener el mismo candidato. La CTE con INSERT es una extensión de PostgreSQL que une las dos instrucciones; primero puedes probarlas por separado leyendo el ID devuelto. El ROLLBACK elimina filas, pero no devuelve los valores consumidos de secuencias.
+
+### Paso a paso
+
+1. Comprueba que estás en la base de práctica y que la [tienda](../docs/CASO_TIENDA.md) conserva sus datos iniciales.
+2. Abre [LABORATORIO.sql](LABORATORIO.sql). Lee el script antes de enviarlo al servidor.
+3. Predice el resultado de cada sentencia. Anota qué representa una fila y qué operaciones pueden cambiar datos.
+4. Desde la raíz, ejecuta:
+
+```text
+psql -X -h localhost -U estudiante -d curso_sql -v ON_ERROR_STOP=1 -f unidad06-insert/LABORATORIO.sql
+```
+
+La contraseña se solicita en la terminal; no la escribas en el repositorio.
+
+5. Compara con la referencia: **Producto de laboratorio, 25.00, true, NULL; una categoría nueva dentro de la transacción.**
+6. Termina con la [práctica](PRACTICA.md), luego contrasta tus decisiones con las [soluciones razonadas](SOLUCIONES.md).
+
+### Transferir la idea a otro problema
+
+Inserta un cliente ficticio con teléfono omitido y devuelve nombre, correo y teléfono. Verifica después del rollback que no existe.
+
+Explica cómo cambiarían los datos si aparece una fila adicional, una referencia ausente o un empate. Distingue una garantía del esquema de una suposición que solo cumple esta muestra. El objetivo es construir una respuesta justificable, no copiar una consulta sin entender su población.
+
 ## Continuar el curso
 
-- **Unidad anterior:** [Unidad 05 — CREATE TABLE y tipos de datos](../unidad05-create-table/README.md)
+- **Unidad anterior:** [Unidad 05: CREATE TABLE y tipos de datos](../unidad05-create-table/README.md)
 - **Volver al índice:** [Todas las unidades](../README.md)
-- **Siguiente unidad:** [Unidad 07 — SELECT: consultar datos](../unidad07-select/README.md)
+- **Siguiente unidad:** [Unidad 07: SELECT: consultar datos](../unidad07-select/README.md)
+

@@ -1,10 +1,5 @@
-# Ejercicios — Orden y límites
-1. Orden ascendente/descendente.
-2. Dos criterios.
-3. Top 5.
-4. DISTINCT.
-5. LIMIT con empates.
-6. Demuestra por qué LIMIT sin ORDER BY no define “los primeros”.
+# Ejercicios de unidad09-order-limit
 
-## Reto
-Construye ranking determinista usando un segundo criterio estable.
+Resuelve la [práctica completa](../PRACTICA.md) y luego revisa las [soluciones razonadas](../SOLUCIONES.md). Entrega tu predicción, consulta o modelo, resultados y explicación de al menos un caso límite.
+
+[Volver a la unidad](../README.md)

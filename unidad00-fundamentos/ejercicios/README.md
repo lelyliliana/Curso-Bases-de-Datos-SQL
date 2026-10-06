@@ -1,8 +1,5 @@
-# Ejercicios — Fundamentos
-1. Identifica datos vs información en cinco escenarios.
-2. Detecta redundancia en tres archivos separados.
-3. Explica qué problema resuelve un DBMS.
-4. Distingue esquema de datos almacenados.
+# Ejercicios de unidad00-fundamentos
 
-## Reto
-Analiza un proceso real basado en hojas de cálculo y enumera inconsistencias que una base de datos podría controlar.
+Resuelve la [práctica completa](../PRACTICA.md) y luego revisa las [soluciones razonadas](../SOLUCIONES.md). Entrega tu predicción, consulta o modelo, resultados y explicación de al menos un caso límite.
+
+[Volver a la unidad](../README.md)

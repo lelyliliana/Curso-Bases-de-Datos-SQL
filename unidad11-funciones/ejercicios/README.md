@@ -1,10 +1,5 @@
-# Ejercicios — Funciones y expresiones
-1. CASE por rangos.
-2. COALESCE.
-3. LOWER/UPPER.
-4. longitud.
-5. cálculo de subtotal.
-6. extracción de partes de fecha.
+# Ejercicios de unidad11-funciones
 
-## Reto
-Crea reporte legible transformando datos sin alterar las tablas.
+Resuelve la [práctica completa](../PRACTICA.md) y luego revisa las [soluciones razonadas](../SOLUCIONES.md). Entrega tu predicción, consulta o modelo, resultados y explicación de al menos un caso límite.
+
+[Volver a la unidad](../README.md)

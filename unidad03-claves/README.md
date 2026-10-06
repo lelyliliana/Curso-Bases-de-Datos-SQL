@@ -1,4 +1,4 @@
-# Unidad 03 — Claves y restricciones
+# Unidad 03: Claves y restricciones
 
 [Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
 
@@ -147,8 +147,25 @@ Continúa con PostgreSQL.
 
 ---
 
+## Caso desarrollado: Claves mínimas, NULL e integridad explícita
+
+MATRICULA contiene estudiante_id,curso_id,periodo,fecha y nota. Un estudiante puede repetir un curso en un periodo posterior, pero no duplicarlo en el mismo. Define claves y restricciones sin perder esa posibilidad.
+
+### Solución explicada
+
+Clave candidata (estudiante_id,curso_id,periodo). Es mínima bajo la regla: quitar cualquiera permitiría ambigüedad. Una superclave puede agregar fecha y seguir identificando, pero ya no es mínima. Puedes elegir PK compuesta o id técnico con UNIQUE(estudiante_id,curso_id,periodo) y NOT NULL en sus componentes. Nota puede ser NULL antes de calificar; CHECK(nota BETWEEN 0 AND 5) limita valores presentes, no obliga a calificar.
+
+En PostgreSQL, UNIQUE permite normalmente varios NULL: NULL no se considera igual a otro NULL para esa restricción. UNIQUE NULLS NOT DISTINCT cambia esa política. Una PK combina unicidad con no nulidad, y solo hay una PK por tabla. IDENTITY sin PK o UNIQUE no garantiza unicidad de la tabla.
+
+Un CHECK se satisface con TRUE o UNKNOWN; por ello CHECK(precio>0) debe acompañarse de NOT NULL si el precio es obligatorio. No valida otras filas ni la existencia de un padre: usa FK para eso. Una FK nullable permite ausencia del padre; FK más NOT NULL exige una referencia válida. No evalúa que un padre tenga hijos.
+
+### Practicar y comprobar
+
+Resuelve la [práctica](PRACTICA.md) con tus propias reglas. Compara después con las [soluciones razonadas](SOLUCIONES.md). En estas unidades el trabajo es conceptual: instala PostgreSQL al llegar a la Unidad 04, sin adelantar SQL que todavía no necesitas.
+
 ## Continuar el curso
 
-- **Unidad anterior:** [Unidad 02 — Entidades, atributos y relaciones](../unidad02-modelado/README.md)
+- **Unidad anterior:** [Unidad 02: Entidades, atributos y relaciones](../unidad02-modelado/README.md)
 - **Volver al índice:** [Todas las unidades](../README.md)
-- **Siguiente unidad:** [Unidad 04 — PostgreSQL y entorno](../unidad04-postgresql/README.md)
+- **Siguiente unidad:** [Unidad 04: PostgreSQL y entorno](../unidad04-postgresql/README.md)
+

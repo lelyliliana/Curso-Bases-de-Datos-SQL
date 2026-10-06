@@ -1,10 +1,5 @@
-# Ejercicios — SELECT
-1. Todas las columnas.
-2. Proyección.
-3. Alias.
-4. Expresión calculada.
-5. Concatenación.
-6. Selecciona solo columnas necesarias para un reporte.
+# Ejercicios de unidad07-select
 
-## Reto
-Diseña tres consultas para tres usuarios diferentes sobre las mismas tablas.
+Resuelve la [práctica completa](../PRACTICA.md) y luego revisa las [soluciones razonadas](../SOLUCIONES.md). Entrega tu predicción, consulta o modelo, resultados y explicación de al menos un caso límite.
+
+[Volver a la unidad](../README.md)

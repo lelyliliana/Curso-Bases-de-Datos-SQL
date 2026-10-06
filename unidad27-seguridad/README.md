@@ -1,9 +1,13 @@
-# Unidad 27 — Usuarios, roles y privilegios
+# Unidad 27: Usuarios, roles y privilegios
 
 [Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
 
 ## Qué aprenderás
 Comprender autenticación/autorización a nivel de base, crear roles y aplicar mínimo privilegio.
+
+## Cómo usar los ejemplos de esta unidad
+
+Los ejemplos breves ilustran una idea y pueden usar un conjunto reducido de filas o una tabla independiente. Para ejecutarlos juntos sin conflictos, utiliza el laboratorio y la práctica de esta unidad sobre la [tienda de referencia](../docs/CASO_TIENDA.md). Sus scripts declaran la preparación, resultados y rollback. No vuelvas a crear las tablas de tienda ni repitas su carga para seguir un fragmento ilustrativo.
 
 # 1. El problema
 
@@ -139,8 +143,37 @@ Continúa con importación/exportación.
 
 ---
 
+## Laboratorio completo y lectura del resultado
+
+**Caso:** ¿USAGE sobre un esquema implica permiso para modificar sus tablas?
+
+Ejecuta con un administrador en la base de práctica. NOLOGIN sirve para agrupar privilegios; LOGIN habilita una identidad para conectarse. USAGE permite resolver objetos del esquema, SELECT permite leer la tabla y CONNECT permite conexión a la base. Un propietario puede alterar o borrar sus objetos; no verifiques mínimo privilegio con el mismo dueño. Los permisos son acumulativos por membresías y PUBLIC.
+
+### Paso a paso
+
+1. Comprueba que estás en la base de práctica y que la [tienda](../docs/CASO_TIENDA.md) conserva sus datos iniciales.
+2. Abre [LABORATORIO.sql](LABORATORIO.sql). Lee el script antes de enviarlo al servidor.
+3. Predice el resultado de cada sentencia. Anota qué representa una fila y qué operaciones pueden cambiar datos.
+4. Desde la raíz, ejecuta:
+
+```text
+psql -X -h localhost -U estudiante -d curso_sql -v ON_ERROR_STOP=1 -f unidad27-seguridad/LABORATORIO.sql
+```
+
+Para esta unidad usa una identidad administrativa con CREATEROLE en lugar de estudiante. El rol de demostración es NOLOGIN y se revierte al terminar.
+
+5. Compara con la referencia: **El lector consulta cuatro categorías y recibe 42501 al insertar. Rol y concesiones desaparecen con rollback.**
+6. Termina con la [práctica](PRACTICA.md), luego contrasta tus decisiones con las [soluciones razonadas](SOLUCIONES.md).
+
+### Transferir la idea a otro problema
+
+Diseña permisos para un analista que lee tablas actuales y futuras de tienda, sin poder crear objetos. Especifica el propietario para default privileges.
+
+Explica cómo cambiarían los datos si aparece una fila adicional, una referencia ausente o un empate. Distingue una garantía del esquema de una suposición que solo cumple esta muestra. El objetivo es construir una respuesta justificable, no copiar una consulta sin entender su población.
+
 ## Continuar el curso
 
-- **Unidad anterior:** [Unidad 26 — EXPLAIN y planes de ejecución](../unidad26-explain/README.md)
+- **Unidad anterior:** [Unidad 26: EXPLAIN y planes de ejecución](../unidad26-explain/README.md)
 - **Volver al índice:** [Todas las unidades](../README.md)
-- **Siguiente unidad:** [Unidad 28 — Importación y exportación](../unidad28-import-export/README.md)
+- **Siguiente unidad:** [Unidad 28: Importación y exportación](../unidad28-import-export/README.md)
+

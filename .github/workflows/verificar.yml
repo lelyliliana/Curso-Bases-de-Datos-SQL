@@ -1,0 +1,50 @@
+name: Verificar curso SQL
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  comprobar:
+    name: ${{ matrix.os }} / PostgreSQL ${{ matrix.pg }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-latest
+            pg: '17'
+          - os: windows-latest
+            pg: '17'
+          - os: macos-latest
+            pg: '17'
+          - os: ubuntu-latest
+            pg: '18'
+          - os: macos-latest
+            pg: '18'
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - uses: ankane/setup-postgres@v1
+        with:
+          postgres-version: ${{ matrix.pg }}
+          user: postgres
+      - name: Instalar driver de comprobación
+        run: python -m pip install -r requirements.txt
+      - name: Verificar contenidos y base de datos
+        env:
+          PGHOST: localhost
+          PGPORT: '5432'
+          PGUSER: postgres
+          PGCLIENTENCODING: UTF8
+          PYTHONIOENCODING: utf-8
+        run: python scripts/verificar.py
+      - name: Conservar resultados
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: resultado-${{ matrix.os }}-pg${{ matrix.pg }}
+          path: salidas/

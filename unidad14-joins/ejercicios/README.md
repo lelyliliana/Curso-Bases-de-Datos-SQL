@@ -1,10 +1,5 @@
-# Ejercicios — JOIN
-1. Producto/categoría.
-2. Pedido/cliente.
-3. Pedido/detalle/producto.
-4. Categorías sin productos.
-5. Clientes sin pedidos.
-6. Autocomposición conceptual cuando el modelo lo requiera.
+# Ejercicios de unidad14-joins
 
-## Diagnóstico
-Para cada consulta anota cardinalidad esperada antes de ejecutarla.
+Resuelve la [práctica completa](../PRACTICA.md) y luego revisa las [soluciones razonadas](../SOLUCIONES.md). Entrega tu predicción, consulta o modelo, resultados y explicación de al menos un caso límite.
+
+[Volver a la unidad](../README.md)

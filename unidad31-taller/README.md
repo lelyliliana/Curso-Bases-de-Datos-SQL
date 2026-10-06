@@ -1,4 +1,4 @@
-# Unidad 31 — Taller integrador de SQL
+# Unidad 31: Taller integrador de SQL
 
 [Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
 
@@ -17,29 +17,29 @@ Para cada problema:
 
 Usa `PLANTILLA_SOLUCION.md`.
 
-# Nivel 1 — Fundamentos
+# Nivel 1: Fundamentos
 
-## Problema 1 — Catálogo
+## Problema 1: Catálogo
 Lista productos activos con nombre, categoría y precio, ordenados alfabéticamente.
 
-## Problema 2 — Inventario lógico
+## Problema 2: Inventario lógico
 Encuentra categorías sin productos.
 
-## Problema 3 — Clientes
+## Problema 3: Clientes
 Encuentra clientes que nunca han realizado pedidos.
 
-# Nivel 2 — Agregación
+# Nivel 2: Agregación
 
-## Problema 4 — Total de pedido
+## Problema 4: Total de pedido
 Calcula total por pedido.
 
-## Problema 5 — Clientes
+## Problema 5: Clientes
 Calcula valor total pagado por cliente considerando únicamente pedidos PAGADO.
 
-## Problema 6 — Categorías
+## Problema 6: Categorías
 Muestra categorías cuyo precio promedio supere un umbral.
 
-# Nivel 3 — Consultas alternativas
+# Nivel 3: Consultas alternativas
 
 ## Problema 7
 Resuelve “clientes con pedidos” usando EXISTS y JOIN. Compara.
@@ -47,7 +47,7 @@ Resuelve “clientes con pedidos” usando EXISTS y JOIN. Compara.
 ## Problema 8
 Reescribe un reporte complejo usando CTE.
 
-# Nivel 4 — Diseño
+# Nivel 4: Diseño
 
 ## Problema 9
 Recibes:
@@ -59,7 +59,7 @@ Detecta anomalías y normaliza.
 ## Problema 10
 Diseña DER para proveedores y compras.
 
-# Nivel 5 — Integridad y transacciones
+# Nivel 5: Integridad y transacciones
 
 ## Problema 11
 Define acciones FK para cliente/pedido y pedido/detalle.
@@ -67,14 +67,14 @@ Define acciones FK para cliente/pedido y pedido/detalle.
 ## Problema 12
 Diseña una operación todo-o-nada y demuéstrala con ROLLBACK.
 
-# Nivel 6 — Rendimiento
+# Nivel 6: Rendimiento
 
 ## Problema 13
 Elige una consulta, genera volumen suficiente, captura EXPLAIN, propone índice y vuelve a medir.
 
 No se acepta “mejoró” sin evidencia.
 
-# Nivel 7 — Operación
+# Nivel 7: Operación
 
 ## Problema 14
 Diseña rol de solo lectura.
@@ -105,8 +105,13 @@ Si algún punto todavía requiere copiar una solución sin comprenderla, vuelve 
 
 ---
 
+## Material completo de aplicación
+
+Resuelve [PRACTICA.md](PRACTICA.md), ejecuta [LABORATORIO.sql](LABORATORIO.sql) y contrasta con [SOLUCIONES.md](SOLUCIONES.md).
+
 ## Continuar el curso
 
-- **Unidad anterior:** [Unidad 30 — Calidad y limpieza de datos](../unidad30-calidad/README.md)
+- **Unidad anterior:** [Unidad 30: Calidad y limpieza de datos](../unidad30-calidad/README.md)
 - **Volver al índice:** [Todas las unidades](../README.md)
-- **Siguiente unidad:** [Unidad 32 — Proyecto final](../unidad32-proyecto-final/README.md)
+- **Siguiente unidad:** [Unidad 32: Proyecto final](../unidad32-proyecto-final/README.md)
+

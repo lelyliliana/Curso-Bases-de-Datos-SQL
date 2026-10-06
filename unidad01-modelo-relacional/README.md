@@ -1,4 +1,4 @@
-# Unidad 01 — Modelo relacional
+# Unidad 01: Modelo relacional
 
 [Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
 
@@ -154,13 +154,30 @@ No uses SQL.
 - [ ] No dependo del orden físico.
 - [ ] Puedo detectar valores multivaluados improvisados.
 
-Continúa con **Unidad 02 — Entidades, atributos y relaciones**.
+Continúa con **Unidad 02: Entidades, atributos y relaciones**.
 
 
 ---
 
+## Caso desarrollado: Modelo relacional, conjuntos y multiplicidad en SQL
+
+Ana cursa Java y Bases de datos; Luis cursa Java. Una fila persona incluye cursos='Java,Bases de datos'. Separa los hechos, define dominios y explica cómo encontrar quienes cursan Java.
+
+### Solución explicada
+
+PERSONA(id,nombre), CURSO(id,nombre), INSCRIPCION(persona_id,curso_id). PERSONA contiene Ana=1 y Luis=2, CURSO Java=10 y Bases de datos=20, INSCRIPCION contiene (1,10),(1,20),(2,10). La clave compuesta evita repetir una inscripción en este supuesto. Si existen periodos, se agrega periodo a la regla.
+
+En teoría una relación es un conjunto de tuplas y no admite duplicados; SQL permite tablas sin claves y consultas que conservan duplicados (semántica de multiconjunto). Por eso una consulta no elimina automáticamente dos nombres iguales. Relación matemática tampoco tiene orden de filas: SQL requiere ORDER BY para pedirlo. Dominio significa valores válidos y semántica, no solo el tipo físico; un entero puede representar edad o cantidad, con límites diferentes.
+
+LIBRO representa una edición y EJEMPLAR una copia física; un ISBN identifica normalmente una edición/formato, no toda obra abstracta. Si el negocio necesita agrupar traducciones y ediciones, introduce OBRA y EDICION antes de EJEMPLAR. Un título no es una clave candidata por parecer único en tres filas.
+
+### Practicar y comprobar
+
+Resuelve la [práctica](PRACTICA.md) con tus propias reglas. Compara después con las [soluciones razonadas](SOLUCIONES.md). En estas unidades el trabajo es conceptual: instala PostgreSQL al llegar a la Unidad 04, sin adelantar SQL que todavía no necesitas.
+
 ## Continuar el curso
 
-- **Unidad anterior:** [Unidad 00 — Datos, información y bases de datos](../unidad00-fundamentos/README.md)
+- **Unidad anterior:** [Unidad 00: Datos, información y bases de datos](../unidad00-fundamentos/README.md)
 - **Volver al índice:** [Todas las unidades](../README.md)
-- **Siguiente unidad:** [Unidad 02 — Entidades, atributos y relaciones](../unidad02-modelado/README.md)
+- **Siguiente unidad:** [Unidad 02: Entidades, atributos y relaciones](../unidad02-modelado/README.md)
+

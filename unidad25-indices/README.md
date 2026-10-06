@@ -1,9 +1,13 @@
-# Unidad 25 — Índices
+# Unidad 25: Índices
 
 [Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
 
 ## Qué aprenderás
 Comprender qué problema resuelve un índice, sus costos y por qué el optimizador puede decidir no usarlo.
+
+## Cómo usar los ejemplos de esta unidad
+
+Los ejemplos breves ilustran una idea y pueden usar un conjunto reducido de filas o una tabla independiente. Para ejecutarlos juntos sin conflictos, utiliza el laboratorio y la práctica de esta unidad sobre la [tienda de referencia](../docs/CASO_TIENDA.md). Sus scripts declaran la preparación, resultados y rollback. No vuelvas a crear las tablas de tienda ni repitas su carga para seguir un fragmento ilustrativo.
 
 # 1. Buscar sin índice
 
@@ -127,8 +131,37 @@ Continúa con EXPLAIN.
 
 ---
 
+## Laboratorio completo y lectura del resultado
+
+**Caso:** ¿Por qué un índice útil en una tabla grande puede ignorarse en una tabla pequeña?
+
+El filtro selecciona 100 de 100000 filas: es suficientemente selectivo para explorar una ruta por índice, sin exigir que un nodo específico aparezca. La PK y UNIQUE ya generan índices; una FK no crea automáticamente uno en su lado hijo. Un B-tree compuesto favorece filtros por columnas iniciales, aunque el optimizador puede usar otras estrategias según versión y distribución. No es una regla de imposible uso sin la primera columna.
+
+### Paso a paso
+
+1. Comprueba que estás en la base de práctica y que la [tienda](../docs/CASO_TIENDA.md) conserva sus datos iniciales.
+2. Abre [LABORATORIO.sql](LABORATORIO.sql). Lee el script antes de enviarlo al servidor.
+3. Predice el resultado de cada sentencia. Anota qué representa una fila y qué operaciones pueden cambiar datos.
+4. Desde la raíz, ejecuta:
+
+```text
+psql -X -h localhost -U estudiante -d curso_sql -v ON_ERROR_STOP=1 -f unidad25-indices/LABORATORIO.sql
+```
+
+La contraseña se solicita en la terminal; no la escribas en el repositorio.
+
+5. Compara con la referencia: **100 coincidencias antes y después. Los planes y tiempos exactos dependen del entorno.**
+6. Termina con la [práctica](PRACTICA.md), luego contrasta tus decisiones con las [soluciones razonadas](SOLUCIONES.md).
+
+### Transferir la idea a otro problema
+
+Compara igualdad selectiva con cliente_id>=0. ¿El mismo índice es útil para todas las filas?
+
+Explica cómo cambiarían los datos si aparece una fila adicional, una referencia ausente o un empate. Distingue una garantía del esquema de una suposición que solo cumple esta muestra. El objetivo es construir una respuesta justificable, no copiar una consulta sin entender su población.
+
 ## Continuar el curso
 
-- **Unidad anterior:** [Unidad 24 — Concurrencia y aislamiento](../unidad24-concurrencia/README.md)
+- **Unidad anterior:** [Unidad 24: Concurrencia y aislamiento](../unidad24-concurrencia/README.md)
 - **Volver al índice:** [Todas las unidades](../README.md)
-- **Siguiente unidad:** [Unidad 26 — EXPLAIN y planes de ejecución](../unidad26-explain/README.md)
+- **Siguiente unidad:** [Unidad 26: EXPLAIN y planes de ejecución](../unidad26-explain/README.md)
+

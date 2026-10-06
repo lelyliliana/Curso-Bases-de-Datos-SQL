@@ -1,11 +1,5 @@
-# Ejercicios — WHERE
-Sobre la base tienda:
-1. productos activos > 80;
-2. nombres que contienen "a";
-3. pedidos en rango de fechas;
-4. valores NULL;
-5. combinaciones AND/OR con paréntesis;
-6. NOT IN y comportamiento con NULL a investigar.
+# Ejercicios de unidad08-where
 
-## Reto
-Escribe cinco filtros y construye casos que demuestren por qué los paréntesis cambian la lógica.
+Resuelve la [práctica completa](../PRACTICA.md) y luego revisa las [soluciones razonadas](../SOLUCIONES.md). Entrega tu predicción, consulta o modelo, resultados y explicación de al menos un caso límite.
+
+[Volver a la unidad](../README.md)

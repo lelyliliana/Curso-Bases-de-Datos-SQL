@@ -1,4 +1,4 @@
-# Unidad 02 — Entidades, atributos y relaciones
+# Unidad 02: Entidades, atributos y relaciones
 
 [Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
 
@@ -75,7 +75,7 @@ Si el sistema registra animales rescatados sin propietario, la relación podría
 
 Cardinalidad y opcionalidad expresan **reglas del negocio**, no preferencias del diseñador.
 
-# 6. Ejemplo resuelto — Tienda
+# 6. Ejemplo resuelto: Tienda
 
 Enunciado:
 “Clientes realizan pedidos. Cada pedido contiene productos y registra la cantidad y precio vendido.”
@@ -93,7 +93,7 @@ Porque la relación pedido-producto tiene datos propios:
 - cantidad;
 - precio_unitario.
 
-# 7. Práctica guiada — Veterinaria
+# 7. Práctica guiada: Veterinaria
 
 Necesitamos:
 - propietario;
@@ -150,13 +150,30 @@ Escribe cinco preguntas que necesitarías hacer al responsable del negocio antes
 - [ ] Pregunto por opcionalidad.
 - [ ] No salto directamente a CREATE TABLE.
 
-Continúa con **Unidad 03 — Claves y restricciones**.
+Continúa con **Unidad 03: Claves y restricciones**.
 
 
 ---
 
+## Caso desarrollado: Cardinalidad, opcionalidad y preguntas al dominio
+
+Una plataforma registra eventos, asistentes e inscripciones. Un evento tiene un organizador, puede no tener inscritos todavía y cada inscripción corresponde a un evento y a un asistente. Modela y anota supuestos.
+
+### Solución explicada
+
+ORGANIZADOR 1 a 0..N EVENTO; EVENTO 1 a 0..N INSCRIPCION; ASISTENTE 1 a 0..N INSCRIPCION. Cada inscripción tiene exactamente un evento y un asistente. Bajo el supuesto de inscripción única por evento: clave candidata (evento_id,asistente_id). Si hay varios intentos o entradas transferibles, distingue inscripción de entrada y vuelve a definir unicidad.
+
+Fecha de inscripción pertenece a INSCRIPCION; capacidad a EVENTO. No pongas fecha de pago en ASISTENTE porque una persona puede pagar varias inscripciones. Si una inscripción admite abonos, PAGO es una entidad hija con importe y fecha. Capacidad no negativa se protege por fila, pero «inscritos no superan capacidad» requiere coordinación entre filas; una FK no resuelve esa regla.
+
+Preguntas que cambian el modelo: ¿organizadores conjuntos?, ¿inscripción cancelada permite volver a inscribirse?, ¿evento gratuito admite pagos?, ¿una persona compra para otras?, ¿cómo se controla el cupo concurrentemente? Distingue reglas confirmadas de dudas. No confundas participación mínima cero con ausencia de una FK obligatoria del otro lado.
+
+### Practicar y comprobar
+
+Resuelve la [práctica](PRACTICA.md) con tus propias reglas. Compara después con las [soluciones razonadas](SOLUCIONES.md). En estas unidades el trabajo es conceptual: instala PostgreSQL al llegar a la Unidad 04, sin adelantar SQL que todavía no necesitas.
+
 ## Continuar el curso
 
-- **Unidad anterior:** [Unidad 01 — Modelo relacional](../unidad01-modelo-relacional/README.md)
+- **Unidad anterior:** [Unidad 01: Modelo relacional](../unidad01-modelo-relacional/README.md)
 - **Volver al índice:** [Todas las unidades](../README.md)
-- **Siguiente unidad:** [Unidad 03 — Claves y restricciones](../unidad03-claves/README.md)
+- **Siguiente unidad:** [Unidad 03: Claves y restricciones](../unidad03-claves/README.md)
+

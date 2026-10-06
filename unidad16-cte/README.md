@@ -1,9 +1,13 @@
-# Unidad 16 — CTE: nombrar etapas de una consulta
+# Unidad 16: CTE: nombrar etapas de una consulta
 
 [Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
 
 ## Qué aprenderás
 Usar WITH para dividir consultas complejas en pasos legibles y comprender que una CTE no implica automáticamente mejor rendimiento.
+
+## Cómo usar los ejemplos de esta unidad
+
+Los ejemplos breves ilustran una idea y pueden usar un conjunto reducido de filas o una tabla independiente. Para ejecutarlos juntos sin conflictos, utiliza el laboratorio y la práctica de esta unidad sobre la [tienda de referencia](../docs/CASO_TIENDA.md). Sus scripts declaran la preparación, resultados y rollback. No vuelvas a crear las tablas de tienda ni repitas su carga para seguir un fragmento ilustrativo.
 
 # 1. Problema
 
@@ -109,8 +113,41 @@ Continúa con operaciones de conjuntos.
 
 ---
 
+## Laboratorio completo y lectura del resultado
+
+**Caso:** ¿Cómo separar población, cálculo y presentación en un reporte de ventas?
+
+La primera CTE fija una fila por pedido; la segunda suma solo pagados por cliente y la consulta exterior conserva todos los clientes. Una CTE no persiste después de la sentencia. PostgreSQL puede integrarla al plan o materializarla según sus características: legibilidad y rendimiento se evalúan por separado.
+
+### Paso a paso
+
+1. Comprueba que estás en la base de práctica y que la [tienda](../docs/CASO_TIENDA.md) conserva sus datos iniciales.
+2. Abre [LABORATORIO.sql](LABORATORIO.sql). Lee el script antes de enviarlo al servidor.
+3. Predice el resultado de cada sentencia. Anota qué representa una fila y qué operaciones pueden cambiar datos.
+4. Desde la raíz, ejecuta:
+
+```text
+psql -X -h localhost -U estudiante -d curso_sql -v ON_ERROR_STOP=1 -f unidad16-cte/LABORATORIO.sql
+```
+
+La contraseña se solicita en la terminal; no la escribas en el repositorio.
+
+5. Compara con la referencia: **Ana 470.00; Luis, Sara y Tomás 0. Las cuatro personas aparecen.**
+6. Termina con la [práctica](PRACTICA.md), luego contrasta tus decisiones con las [soluciones razonadas](SOLUCIONES.md).
+
+### Transferir la idea a otro problema
+
+Calcula total por pedido, conserva todos, y filtra los que superan 100 mediante una CTE.
+
+Explica cómo cambiarían los datos si aparece una fila adicional, una referencia ausente o un empate. Distingue una garantía del esquema de una suposición que solo cumple esta muestra. El objetivo es construir una respuesta justificable, no copiar una consulta sin entender su población.
+
+### Ampliación y experimentos
+
+[Recursión y funciones de ventana](AMPLIACION.md), con [SQL ejecutable](AMPLIACION.sql).
+
 ## Continuar el curso
 
-- **Unidad anterior:** [Unidad 15 — Subconsultas y EXISTS](../unidad15-subconsultas/README.md)
+- **Unidad anterior:** [Unidad 15: Subconsultas y EXISTS](../unidad15-subconsultas/README.md)
 - **Volver al índice:** [Todas las unidades](../README.md)
-- **Siguiente unidad:** [Unidad 17 — Operaciones de conjuntos](../unidad17-conjuntos/README.md)
+- **Siguiente unidad:** [Unidad 17: Operaciones de conjuntos](../unidad17-conjuntos/README.md)
+

@@ -1,9 +1,5 @@
-# Ejercicios — Transacciones
-1. UPDATE + ROLLBACK.
-2. Dos INSERT que deben ocurrir juntos.
-3. Pedido + detalles atómicos.
-4. Provoca constraint violation dentro de una transacción.
-5. Compara estado antes/después.
+# Ejercicios de unidad23-transacciones
 
-## Reto
-Diseña una operación de negocio de al menos tres sentencias que no deba quedar parcialmente aplicada.
+Resuelve la [práctica completa](../PRACTICA.md) y luego revisa las [soluciones razonadas](../SOLUCIONES.md). Entrega tu predicción, consulta o modelo, resultados y explicación de al menos un caso límite.
+
+[Volver a la unidad](../README.md)

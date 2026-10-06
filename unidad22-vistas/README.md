@@ -1,9 +1,13 @@
-# Unidad 22 — Vistas
+# Unidad 22: Vistas
 
 [Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
 
 ## Qué aprenderás
 Crear consultas reutilizables como objetos del esquema y distinguir vista normal de tabla y vista materializada.
+
+## Cómo usar los ejemplos de esta unidad
+
+Los ejemplos breves ilustran una idea y pueden usar un conjunto reducido de filas o una tabla independiente. Para ejecutarlos juntos sin conflictos, utiliza el laboratorio y la práctica de esta unidad sobre la [tienda de referencia](../docs/CASO_TIENDA.md). Sus scripts declaran la preparación, resultados y rollback. No vuelvas a crear las tablas de tienda ni repitas su carga para seguir un fragmento ilustrativo.
 
 # 1. Consulta repetida
 
@@ -99,8 +103,37 @@ Continúa con transacciones.
 
 ---
 
+## Laboratorio completo y lectura del resultado
+
+**Caso:** ¿Una vista normal se actualiza al cambiar la tabla o conserva una copia?
+
+La vista normal conserva la definición; la materializada almacena resultado y puede quedar desactualizada. Este reporte agrupado no es automáticamente actualizable. Una vista no ordena todas las consultas consumidoras: agrega ORDER BY al leer. Para seguridad hay que revisar permisos y semántica del propietario, no solo ocultar columnas visualmente.
+
+### Paso a paso
+
+1. Comprueba que estás en la base de práctica y que la [tienda](../docs/CASO_TIENDA.md) conserva sus datos iniciales.
+2. Abre [LABORATORIO.sql](LABORATORIO.sql). Lee el script antes de enviarlo al servidor.
+3. Predice el resultado de cada sentencia. Anota qué representa una fila y qué operaciones pueden cambiar datos.
+4. Desde la raíz, ejecuta:
+
+```text
+psql -X -h localhost -U estudiante -d curso_sql -v ON_ERROR_STOP=1 -f unidad22-vistas/LABORATORIO.sql
+```
+
+La contraseña se solicita en la terminal; no la escribas en el repositorio.
+
+5. Compara con la referencia: **Vista inicial 320,90,150,0,450. Tras primera actualización: 400. Materializada conserva 400 tras otra actualización, luego REFRESH muestra 480.**
+6. Termina con la [práctica](PRACTICA.md), luego contrasta tus decisiones con las [soluciones razonadas](SOLUCIONES.md).
+
+### Transferir la idea a otro problema
+
+Crea una vista de catálogo activo que exponga id, nombre y precio, pero no datos de clientes.
+
+Explica cómo cambiarían los datos si aparece una fila adicional, una referencia ausente o un empate. Distingue una garantía del esquema de una suposición que solo cumple esta muestra. El objetivo es construir una respuesta justificable, no copiar una consulta sin entender su población.
+
 ## Continuar el curso
 
-- **Unidad anterior:** [Unidad 21 — Integridad referencial](../unidad21-integridad/README.md)
+- **Unidad anterior:** [Unidad 21: Integridad referencial](../unidad21-integridad/README.md)
 - **Volver al índice:** [Todas las unidades](../README.md)
-- **Siguiente unidad:** [Unidad 23 — Transacciones y ACID](../unidad23-transacciones/README.md)
+- **Siguiente unidad:** [Unidad 23: Transacciones y ACID](../unidad23-transacciones/README.md)
+

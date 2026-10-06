@@ -1,9 +1,13 @@
-# Unidad 14 — JOIN: combinar tablas
+# Unidad 14: JOIN: combinar tablas
 
 [Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
 
 ## Qué aprenderás
 Comprender por qué necesitamos JOIN, construir INNER/LEFT JOIN y razonar la cardinalidad antes de ejecutar.
+
+## Cómo usar los ejemplos de esta unidad
+
+Los ejemplos breves ilustran una idea y pueden usar un conjunto reducido de filas o una tabla independiente. Para ejecutarlos juntos sin conflictos, utiliza el laboratorio y la práctica de esta unidad sobre la [tienda de referencia](../docs/CASO_TIENDA.md). Sus scripts declaran la preparación, resultados y rollback. No vuelvas a crear las tablas de tienda ni repitas su carga para seguir un fragmento ilustrativo.
 
 # 1. El problema
 
@@ -186,8 +190,37 @@ Continúa con subconsultas.
 
 ---
 
+## Laboratorio completo y lectura del resultado
+
+**Caso:** ¿Cómo incluir categorías vacías sin contar como producto la fila extendida con NULL?
+
+COUNT(*) contaría una fila para Deportes, aunque p.id es NULL; COUNT(p.id) devuelve cero. Poner p.activo en WHERE eliminaría categorías sin coincidencia; en ON limita coincidencias y mantiene el lado izquierdo. RIGHT JOIN invierte el lado conservado, FULL JOIN conserva ambos y CROSS JOIN forma combinaciones; ninguno corrige una clave de unión equivocada.
+
+### Paso a paso
+
+1. Comprueba que estás en la base de práctica y que la [tienda](../docs/CASO_TIENDA.md) conserva sus datos iniciales.
+2. Abre [LABORATORIO.sql](LABORATORIO.sql). Lee el script antes de enviarlo al servidor.
+3. Predice el resultado de cada sentencia. Anota qué representa una fila y qué operaciones pueden cambiar datos.
+4. Desde la raíz, ejecuta:
+
+```text
+psql -X -h localhost -U estudiante -d curso_sql -v ON_ERROR_STOP=1 -f unidad14-joins/LABORATORIO.sql
+```
+
+La contraseña se solicita en la terminal; no la escribas en el repositorio.
+
+5. Compara con la referencia: **Conteos 2,2,1,0. El reporte de líneas contiene cinco filas; pedido 4 no tiene líneas. Conteos activos 2,2,0,0.**
+6. Termina con la [práctica](PRACTICA.md), luego contrasta tus decisiones con las [soluciones razonadas](SOLUCIONES.md).
+
+### Transferir la idea a otro problema
+
+Reporta los cinco pedidos con total, incluso el pedido vacío. Evita usar el precio de producto.
+
+Explica cómo cambiarían los datos si aparece una fila adicional, una referencia ausente o un empate. Distingue una garantía del esquema de una suposición que solo cumple esta muestra. El objetivo es construir una respuesta justificable, no copiar una consulta sin entender su población.
+
 ## Continuar el curso
 
-- **Unidad anterior:** [Unidad 13 — GROUP BY y HAVING](../unidad13-group-having/README.md)
+- **Unidad anterior:** [Unidad 13: GROUP BY y HAVING](../unidad13-group-having/README.md)
 - **Volver al índice:** [Todas las unidades](../README.md)
-- **Siguiente unidad:** [Unidad 15 — Subconsultas y EXISTS](../unidad15-subconsultas/README.md)
+- **Siguiente unidad:** [Unidad 15: Subconsultas y EXISTS](../unidad15-subconsultas/README.md)
+

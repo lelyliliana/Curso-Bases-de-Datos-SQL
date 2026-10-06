@@ -1,10 +1,5 @@
-# Ejercicios — Operaciones de conjuntos
-1. UNION.
-2. UNION ALL.
-3. INTERSECT.
-4. EXCEPT.
-5. Combina históricos y actuales.
-6. Demuestra cuándo UNION elimina filas que sí querías conservar.
+# Ejercicios de unidad17-conjuntos
 
-## Reto
-Diseña integración de dos fuentes compatibles conservando procedencia.
+Resuelve la [práctica completa](../PRACTICA.md) y luego revisa las [soluciones razonadas](../SOLUCIONES.md). Entrega tu predicción, consulta o modelo, resultados y explicación de al menos un caso límite.
+
+[Volver a la unidad](../README.md)

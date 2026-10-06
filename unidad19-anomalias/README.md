@@ -1,9 +1,13 @@
-# Unidad 19 — Dependencias y anomalías
+# Unidad 19: Dependencias y anomalías
 
 [Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
 
 ## Qué aprenderás
 Detectar cuándo una tabla mezcla hechos distintos y comprender dependencias funcionales como base para normalizar.
+
+## Cómo usar los ejemplos de esta unidad
+
+Los ejemplos breves ilustran una idea y pueden usar un conjunto reducido de filas o una tabla independiente. Para ejecutarlos juntos sin conflictos, utiliza el laboratorio y la práctica de esta unidad sobre la [tienda de referencia](../docs/CASO_TIENDA.md). Sus scripts declaran la preparación, resultados y rollback. No vuelvas a crear las tablas de tienda ni repitas su carga para seguir un fragmento ilustrativo.
 
 # 1. Tabla plana
 
@@ -116,8 +120,37 @@ Continúa con normalización.
 
 ---
 
+## Laboratorio completo y lectura del resultado
+
+**Caso:** ¿Cómo detectar una contradicción en una hoja que repite los datos de cliente?
+
+La dependencia cliente→correo proviene del dominio. Los datos pueden refutarla, pero una muestra sin contradicciones no la demuestra. Un correo histórico por venta sería otro atributo y otra regla; no normalices hasta distinguirlo. Las anomalías de actualización, inserción y borrado nacen de mezclar hechos con dependencias diferentes.
+
+### Paso a paso
+
+1. Comprueba que estás en la base de práctica y que la [tienda](../docs/CASO_TIENDA.md) conserva sus datos iniciales.
+2. Abre [LABORATORIO.sql](LABORATORIO.sql). Lee el script antes de enviarlo al servidor.
+3. Predice el resultado de cada sentencia. Anota qué representa una fila y qué operaciones pueden cambiar datos.
+4. Desde la raíz, ejecuta:
+
+```text
+psql -X -h localhost -U estudiante -d curso_sql -v ON_ERROR_STOP=1 -f unidad19-anomalias/LABORATORIO.sql
+```
+
+La contraseña se solicita en la terminal; no la escribas en el repositorio.
+
+5. Compara con la referencia: **Cliente 7 tiene dos correos distintos para una regla de correo actual único por cliente.**
+6. Termina con la [práctica](PRACTICA.md), luego contrasta tus decisiones con las [soluciones razonadas](SOLUCIONES.md).
+
+### Transferir la idea a otro problema
+
+Escribe las dependencias de pedido, producto y detalle. Decide dónde guardar precio vendido y precio actual.
+
+Explica cómo cambiarían los datos si aparece una fila adicional, una referencia ausente o un empate. Distingue una garantía del esquema de una suposición que solo cumple esta muestra. El objetivo es construir una respuesta justificable, no copiar una consulta sin entender su población.
+
 ## Continuar el curso
 
-- **Unidad anterior:** [Unidad 18 — Diagrama entidad-relación](../unidad18-der/README.md)
+- **Unidad anterior:** [Unidad 18: Diagrama entidad-relación](../unidad18-der/README.md)
 - **Volver al índice:** [Todas las unidades](../README.md)
-- **Siguiente unidad:** [Unidad 20 — Normalización: 1FN, 2FN y 3FN](../unidad20-normalizacion/README.md)
+- **Siguiente unidad:** [Unidad 20: Normalización: 1FN, 2FN y 3FN](../unidad20-normalizacion/README.md)
+

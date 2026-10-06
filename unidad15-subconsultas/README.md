@@ -1,9 +1,13 @@
-# Unidad 15 — Subconsultas y EXISTS
+# Unidad 15: Subconsultas y EXISTS
 
 [Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
 
 ## Qué aprenderás
 Usar una consulta dentro de otra y elegir entre valor escalar, IN y EXISTS según la pregunta.
+
+## Cómo usar los ejemplos de esta unidad
+
+Los ejemplos breves ilustran una idea y pueden usar un conjunto reducido de filas o una tabla independiente. Para ejecutarlos juntos sin conflictos, utiliza el laboratorio y la práctica de esta unidad sobre la [tienda de referencia](../docs/CASO_TIENDA.md). Sus scripts declaran la preparación, resultados y rollback. No vuelvas a crear las tablas de tienda ni repitas su carga para seguir un fragmento ilustrativo.
 
 # 1. Subconsulta escalar
 
@@ -140,8 +144,37 @@ Continúa con CTE.
 
 ---
 
+## Laboratorio completo y lectura del resultado
+
+**Caso:** ¿Cómo consultar existencia sin multiplicar clientes por sus pedidos?
+
+EXISTS evalúa presencia de alguna fila y conserva una por cliente. No presupongas que ejecuta físicamente la subconsulta una vez por cada fila: el optimizador puede transformarla. Una subconsulta escalar vacía produce NULL; con más de una fila falla. Una FK NOT NULL en pedido.cliente_id evita NULL allí, pero otras fuentes sí pueden tenerlo.
+
+### Paso a paso
+
+1. Comprueba que estás en la base de práctica y que la [tienda](../docs/CASO_TIENDA.md) conserva sus datos iniciales.
+2. Abre [LABORATORIO.sql](LABORATORIO.sql). Lee el script antes de enviarlo al servidor.
+3. Predice el resultado de cada sentencia. Anota qué representa una fila y qué operaciones pueden cambiar datos.
+4. Desde la raíz, ejecuta:
+
+```text
+psql -X -h localhost -U estudiante -d curso_sql -v ON_ERROR_STOP=1 -f unidad15-subconsultas/LABORATORIO.sql
+```
+
+La contraseña se solicita en la terminal; no la escribas en el repositorio.
+
+5. Compara con la referencia: **Con pedidos: 1,2,4; sin pedidos: Sara (3). NOT IN produce NULL. Por encima de promedio 86: 2,3,4.**
+6. Termina con la [práctica](PRACTICA.md), luego contrasta tus decisiones con las [soluciones razonadas](SOLUCIONES.md).
+
+### Transferir la idea a otro problema
+
+Busca clientes que compraron Libros en pedidos PAGADO con EXISTS. No cuentes un pedido creado como venta.
+
+Explica cómo cambiarían los datos si aparece una fila adicional, una referencia ausente o un empate. Distingue una garantía del esquema de una suposición que solo cumple esta muestra. El objetivo es construir una respuesta justificable, no copiar una consulta sin entender su población.
+
 ## Continuar el curso
 
-- **Unidad anterior:** [Unidad 14 — JOIN: combinar tablas](../unidad14-joins/README.md)
+- **Unidad anterior:** [Unidad 14: JOIN: combinar tablas](../unidad14-joins/README.md)
 - **Volver al índice:** [Todas las unidades](../README.md)
-- **Siguiente unidad:** [Unidad 16 — CTE: nombrar etapas de una consulta](../unidad16-cte/README.md)
+- **Siguiente unidad:** [Unidad 16: CTE: nombrar etapas de una consulta](../unidad16-cte/README.md)
+

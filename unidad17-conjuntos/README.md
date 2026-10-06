@@ -1,9 +1,13 @@
-# Unidad 17 — Operaciones de conjuntos
+# Unidad 17: Operaciones de conjuntos
 
 [Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
 
 ## Qué aprenderás
 Combinar resultados con UNION, UNION ALL, INTERSECT y EXCEPT.
+
+## Cómo usar los ejemplos de esta unidad
+
+Los ejemplos breves ilustran una idea y pueden usar un conjunto reducido de filas o una tabla independiente. Para ejecutarlos juntos sin conflictos, utiliza el laboratorio y la práctica de esta unidad sobre la [tienda de referencia](../docs/CASO_TIENDA.md). Sus scripts declaran la preparación, resultados y rollback. No vuelvas a crear las tablas de tienda ni repitas su carga para seguir un fragmento ilustrativo.
 
 # 1. Dos conjuntos compatibles
 
@@ -139,8 +143,37 @@ Has completado el bloque de consultas. Continúa con diseño y normalización.
 
 ---
 
+## Laboratorio completo y lectura del resultado
+
+**Caso:** ¿Qué cambia entre combinar filas y combinar conjuntos sin duplicados?
+
+Los tipos se alinean por posición, no por nombre. INTERSECT/EXCEPT sin ALL eliminan duplicados. Para estas operaciones dos NULL se tratan como no distintos, a diferencia de una comparación NULL=NULL. ORDER BY al final ordena el resultado combinado. Si agregas fuente, dos filas con el mismo correo pero distinta fuente ya no son duplicadas de toda la proyección.
+
+### Paso a paso
+
+1. Comprueba que estás en la base de práctica y que la [tienda](../docs/CASO_TIENDA.md) conserva sus datos iniciales.
+2. Abre [LABORATORIO.sql](LABORATORIO.sql). Lee el script antes de enviarlo al servidor.
+3. Predice el resultado de cada sentencia. Anota qué representa una fila y qué operaciones pueden cambiar datos.
+4. Desde la raíz, ejecuta:
+
+```text
+psql -X -h localhost -U estudiante -d curso_sql -v ON_ERROR_STOP=1 -f unidad17-conjuntos/LABORATORIO.sql
+```
+
+La contraseña se solicita en la terminal; no la escribas en el repositorio.
+
+5. Compara con la referencia: **UNION: 1,2,3. UNION ALL: 1,1,2,2,3. INTERSECT: 2. EXCEPT: 1.**
+6. Termina con la [práctica](PRACTICA.md), luego contrasta tus decisiones con las [soluciones razonadas](SOLUCIONES.md).
+
+### Transferir la idea a otro problema
+
+Combina dos fuentes con el mismo correo conservando la procedencia. Explica por qué UNION no eliminaría esas dos filas si fuente es distinta.
+
+Explica cómo cambiarían los datos si aparece una fila adicional, una referencia ausente o un empate. Distingue una garantía del esquema de una suposición que solo cumple esta muestra. El objetivo es construir una respuesta justificable, no copiar una consulta sin entender su población.
+
 ## Continuar el curso
 
-- **Unidad anterior:** [Unidad 16 — CTE: nombrar etapas de una consulta](../unidad16-cte/README.md)
+- **Unidad anterior:** [Unidad 16: CTE: nombrar etapas de una consulta](../unidad16-cte/README.md)
 - **Volver al índice:** [Todas las unidades](../README.md)
-- **Siguiente unidad:** [Unidad 18 — Diagrama entidad-relación](../unidad18-der/README.md)
+- **Siguiente unidad:** [Unidad 18: Diagrama entidad-relación](../unidad18-der/README.md)
+

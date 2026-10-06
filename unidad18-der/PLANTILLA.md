@@ -1,4 +1,4 @@
-# Plantilla — DER
+# Plantilla: DER
 
 ## Entidades
 | entidad | significado | identificador |
@@ -18,3 +18,4 @@
 
 ## Validación
 Recorre escenarios reales y verifica que el modelo pueda representarlos sin campos improvisados.
+

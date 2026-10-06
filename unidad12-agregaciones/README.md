@@ -1,9 +1,13 @@
-# Unidad 12 — Agregaciones
+# Unidad 12: Agregaciones
 
 [Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
 
 ## Qué aprenderás
 Resumir muchas filas con COUNT, SUM, AVG, MIN y MAX y comprender el efecto de NULL.
+
+## Cómo usar los ejemplos de esta unidad
+
+Los ejemplos breves ilustran una idea y pueden usar un conjunto reducido de filas o una tabla independiente. Para ejecutarlos juntos sin conflictos, utiliza el laboratorio y la práctica de esta unidad sobre la [tienda de referencia](../docs/CASO_TIENDA.md). Sus scripts declaran la preparación, resultados y rollback. No vuelvas a crear las tablas de tienda ni repitas su carga para seguir un fragmento ilustrativo.
 
 # 1. De filas a una medida
 
@@ -104,8 +108,37 @@ Continúa con GROUP BY.
 
 ---
 
+## Laboratorio completo y lectura del resultado
+
+**Caso:** ¿Promedio de precio por línea y por unidad responden la misma pregunta?
+
+El promedio de cinco precios de línea da el mismo peso a una línea de una unidad que a otra de cinco. El ponderado usa cantidades. Las agregaciones ignoran NULL salvo COUNT(*), pero SUM vacío no es cero automáticamente. COUNT(DISTINCT columna) cuenta valores distintos no nulos.
+
+### Paso a paso
+
+1. Comprueba que estás en la base de práctica y que la [tienda](../docs/CASO_TIENDA.md) conserva sus datos iniciales.
+2. Abre [LABORATORIO.sql](LABORATORIO.sql). Lee el script antes de enviarlo al servidor.
+3. Predice el resultado de cada sentencia. Anota qué representa una fila y qué operaciones pueden cambiar datos.
+4. Desde la raíz, ejecuta:
+
+```text
+psql -X -h localhost -U estudiante -d curso_sql -v ON_ERROR_STOP=1 -f unidad12-agregaciones/LABORATORIO.sql
+```
+
+La contraseña se solicita en la terminal; no la escribas en el repositorio.
+
+5. Compara con la referencia: **5 filas, 3 descripciones, suma 430, promedio 86, mínimo 50, máximo 120. 11 unidades, valor 1010, promedio por línea 91, por unidad 91.82. Población vacía: COUNT 0 y SUM NULL.**
+6. Termina con la [práctica](PRACTICA.md), luego contrasta tus decisiones con las [soluciones razonadas](SOLUCIONES.md).
+
+### Transferir la idea a otro problema
+
+Calcula valor y unidades de pedidos PAGADO, sin incluir creados o cancelados.
+
+Explica cómo cambiarían los datos si aparece una fila adicional, una referencia ausente o un empate. Distingue una garantía del esquema de una suposición que solo cumple esta muestra. El objetivo es construir una respuesta justificable, no copiar una consulta sin entender su población.
+
 ## Continuar el curso
 
-- **Unidad anterior:** [Unidad 11 — Funciones y expresiones](../unidad11-funciones/README.md)
+- **Unidad anterior:** [Unidad 11: Funciones y expresiones](../unidad11-funciones/README.md)
 - **Volver al índice:** [Todas las unidades](../README.md)
-- **Siguiente unidad:** [Unidad 13 — GROUP BY y HAVING](../unidad13-group-having/README.md)
+- **Siguiente unidad:** [Unidad 13: GROUP BY y HAVING](../unidad13-group-having/README.md)
+

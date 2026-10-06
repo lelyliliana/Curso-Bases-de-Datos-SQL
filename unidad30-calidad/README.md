@@ -1,9 +1,13 @@
-# Unidad 30 — Calidad y limpieza de datos
+# Unidad 30: Calidad y limpieza de datos
 
 [Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
 
 ## Qué aprenderás
 Perfilar datos antes de corregirlos, definir reglas de calidad y mantener trazabilidad de las transformaciones.
+
+## Cómo usar los ejemplos de esta unidad
+
+Los ejemplos breves ilustran una idea y pueden usar un conjunto reducido de filas o una tabla independiente. Para ejecutarlos juntos sin conflictos, utiliza el laboratorio y la práctica de esta unidad sobre la [tienda de referencia](../docs/CASO_TIENDA.md). Sus scripts declaran la preparación, resultados y rollback. No vuelvas a crear las tablas de tienda ni repitas su carga para seguir un fragmento ilustrativo.
 
 # 1. “Limpiar” no significa borrar lo raro
 
@@ -153,8 +157,37 @@ Ahora estás listo para integrar lo aprendido.
 
 ---
 
+## Laboratorio completo y lectura del resultado
+
+**Caso:** ¿Cómo medir calidad y conservar el dato original antes de corregir espacios?
+
+La clasificación registra una primera causa por fila; el perfil puede registrar varias incidencias y su suma superar el número de rechazadas. pg_input_is_valid verifica conversión del tipo, no todas las reglas del dominio. numeric admite valores especiales como NaN; una política real puede requerir rechazarlos explícitamente. No sobrescribas raw ni inventes un nombre para pasar NOT NULL.
+
+### Paso a paso
+
+1. Comprueba que estás en la base de práctica y que la [tienda](../docs/CASO_TIENDA.md) conserva sus datos iniciales.
+2. Abre [LABORATORIO.sql](LABORATORIO.sql). Lee el script antes de enviarlo al servidor.
+3. Predice el resultado de cada sentencia. Anota qué representa una fila y qué operaciones pueden cambiar datos.
+4. Desde la raíz, ejecuta:
+
+```text
+psql -X -h localhost -U estudiante -d curso_sql -v ON_ERROR_STOP=1 -f unidad30-calidad/LABORATORIO.sql
+```
+
+La contraseña se solicita en la terminal; no la escribas en el repositorio.
+
+5. Compara con la referencia: **4 filas; 2 sin nombre; 1 precio no numérico. Reglas por id: ACEPTADO, PRECIO_NO_POSITIVO, NOMBRE_VACIO, NOMBRE_VACIO.**
+6. Termina con la [práctica](PRACTICA.md), luego contrasta tus decisiones con las [soluciones razonadas](SOLUCIONES.md).
+
+### Transferir la idea a otro problema
+
+Calcula porcentaje de filas con nombre vacío y explica si el denominador son filas o valores no nulos.
+
+Explica cómo cambiarían los datos si aparece una fila adicional, una referencia ausente o un empate. Distingue una garantía del esquema de una suposición que solo cumple esta muestra. El objetivo es construir una respuesta justificable, no copiar una consulta sin entender su población.
+
 ## Continuar el curso
 
-- **Unidad anterior:** [Unidad 29 — Backup y restauración](../unidad29-backup/README.md)
+- **Unidad anterior:** [Unidad 29: Backup y restauración](../unidad29-backup/README.md)
 - **Volver al índice:** [Todas las unidades](../README.md)
-- **Siguiente unidad:** [Unidad 31 — Taller integrador de SQL](../unidad31-taller/README.md)
+- **Siguiente unidad:** [Unidad 31: Taller integrador de SQL](../unidad31-taller/README.md)
+

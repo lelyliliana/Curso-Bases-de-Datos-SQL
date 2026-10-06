@@ -1,9 +1,13 @@
-# Unidad 13 — GROUP BY y HAVING
+# Unidad 13: GROUP BY y HAVING
 
 [Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
 
 ## Qué aprenderás
 Crear grupos, calcular métricas por grupo y distinguir WHERE de HAVING.
+
+## Cómo usar los ejemplos de esta unidad
+
+Los ejemplos breves ilustran una idea y pueden usar un conjunto reducido de filas o una tabla independiente. Para ejecutarlos juntos sin conflictos, utiliza el laboratorio y la práctica de esta unidad sobre la [tienda de referencia](../docs/CASO_TIENDA.md). Sus scripts declaran la preparación, resultados y rollback. No vuelvas a crear las tablas de tienda ni repitas su carga para seguir un fragmento ilustrativo.
 
 # 1. El salto conceptual
 
@@ -117,8 +121,37 @@ Continúa con JOIN.
 
 ---
 
+## Laboratorio completo y lectura del resultado
+
+**Caso:** ¿Qué elimina WHERE y qué elimina HAVING en un reporte por categoría?
+
+WHERE elimina la Lámpara antes del grupo; HAVING elimina grupos pequeños. Sara no aparece en el segundo reporte porque la población es pedido. GROUP BY no genera categorías o clientes ausentes; la unidad siguiente incorpora LEFT JOIN. PostgreSQL puede reconocer dependencias de la PK, pero agrupar explícitamente los atributos del reporte facilita leerlo.
+
+### Paso a paso
+
+1. Comprueba que estás en la base de práctica y que la [tienda](../docs/CASO_TIENDA.md) conserva sus datos iniciales.
+2. Abre [LABORATORIO.sql](LABORATORIO.sql). Lee el script antes de enviarlo al servidor.
+3. Predice el resultado de cada sentencia. Anota qué representa una fila y qué operaciones pueden cambiar datos.
+4. Desde la raíz, ejecuta:
+
+```text
+psql -X -h localhost -U estudiante -d curso_sql -v ON_ERROR_STOP=1 -f unidad13-group-having/LABORATORIO.sql
+```
+
+La contraseña se solicita en la terminal; no la escribas en el repositorio.
+
+5. Compara con la referencia: **Categorías 1 y 2: dos activos cada una, promedios 85 y 105. Pedidos por cliente: 1→2, 2→2, 4→1.**
+6. Termina con la [práctica](PRACTICA.md), luego contrasta tus decisiones con las [soluciones razonadas](SOLUCIONES.md).
+
+### Transferir la idea a otro problema
+
+Encuentra clientes con más de un pedido PAGADO. Define qué representa cada fila.
+
+Explica cómo cambiarían los datos si aparece una fila adicional, una referencia ausente o un empate. Distingue una garantía del esquema de una suposición que solo cumple esta muestra. El objetivo es construir una respuesta justificable, no copiar una consulta sin entender su población.
+
 ## Continuar el curso
 
-- **Unidad anterior:** [Unidad 12 — Agregaciones](../unidad12-agregaciones/README.md)
+- **Unidad anterior:** [Unidad 12: Agregaciones](../unidad12-agregaciones/README.md)
 - **Volver al índice:** [Todas las unidades](../README.md)
-- **Siguiente unidad:** [Unidad 14 — JOIN: combinar tablas](../unidad14-joins/README.md)
+- **Siguiente unidad:** [Unidad 14: JOIN: combinar tablas](../unidad14-joins/README.md)
+

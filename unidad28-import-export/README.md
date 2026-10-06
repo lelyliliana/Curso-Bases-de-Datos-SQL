@@ -1,9 +1,13 @@
-# Unidad 28 — Importación y exportación
+# Unidad 28: Importación y exportación
 
 [Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
 
 ## Qué aprenderás
 Mover datos tabulares hacia/desde PostgreSQL, distinguir COPY de \copy y utilizar staging para validar datos externos.
+
+## Cómo usar los ejemplos de esta unidad
+
+Los ejemplos breves ilustran una idea y pueden usar un conjunto reducido de filas o una tabla independiente. Para ejecutarlos juntos sin conflictos, utiliza el laboratorio y la práctica de esta unidad sobre la [tienda de referencia](../docs/CASO_TIENDA.md). Sus scripts declaran la preparación, resultados y rollback. No vuelvas a crear las tablas de tienda ni repitas su carga para seguir un fragmento ilustrativo.
 
 # 1. El problema
 
@@ -145,8 +149,37 @@ Continúa con backup.
 
 ---
 
+## Laboratorio completo y lectura del resultado
+
+**Caso:** ¿Cómo cargar un CSV sin perder los valores crudos de filas rechazadas?
+
+\copy lee desde el cliente y las rutas relativas parten de la carpeta de ejecución. La fila raw se conserva; la normalización del correo es una regla explícita de este lote ficticio, no una garantía universal. Se rechazan ambas filas duplicadas porque no sabemos cuál es correcta. HEADER omite el primer registro, no verifica que sus nombres coincidan con columnas. Esta clasificación usa ventanas, ampliadas en la unidad 16.
+
+### Paso a paso
+
+1. Comprueba que estás en la base de práctica y que la [tienda](../docs/CASO_TIENDA.md) conserva sus datos iniciales.
+2. Abre [LABORATORIO.sql](LABORATORIO.sql). Lee el script antes de enviarlo al servidor.
+3. Predice el resultado de cada sentencia. Anota qué representa una fila y qué operaciones pueden cambiar datos.
+4. Desde la raíz, ejecuta:
+
+```text
+psql -X -h localhost -U estudiante -d curso_sql -v ON_ERROR_STOP=1 -f unidad28-import-export/LABORATORIO.sql
+```
+
+La contraseña se solicita en la terminal; no la escribas en el repositorio.
+
+5. Compara con la referencia: **6 recibidas: 2 aceptadas, 2 correo repetido, 1 correo vacío, 1 nombre vacío. Destino Ana y Luis.**
+6. Termina con la [práctica](PRACTICA.md), luego contrasta tus decisiones con las [soluciones razonadas](SOLUCIONES.md).
+
+### Transferir la idea a otro problema
+
+Exporta las aceptadas a un archivo CSV y vuelve a importarlas en otra tabla temporal para comprobar el conteo.
+
+Explica cómo cambiarían los datos si aparece una fila adicional, una referencia ausente o un empate. Distingue una garantía del esquema de una suposición que solo cumple esta muestra. El objetivo es construir una respuesta justificable, no copiar una consulta sin entender su población.
+
 ## Continuar el curso
 
-- **Unidad anterior:** [Unidad 27 — Usuarios, roles y privilegios](../unidad27-seguridad/README.md)
+- **Unidad anterior:** [Unidad 27: Usuarios, roles y privilegios](../unidad27-seguridad/README.md)
 - **Volver al índice:** [Todas las unidades](../README.md)
-- **Siguiente unidad:** [Unidad 29 — Backup y restauración](../unidad29-backup/README.md)
+- **Siguiente unidad:** [Unidad 29: Backup y restauración](../unidad29-backup/README.md)
+

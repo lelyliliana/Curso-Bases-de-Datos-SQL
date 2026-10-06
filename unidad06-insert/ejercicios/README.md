@@ -1,10 +1,5 @@
-# Ejercicios — INSERT
-1. Una fila.
-2. Varias filas.
-3. DEFAULT.
-4. RETURNING.
-5. Inserción que viola FK.
-6. Inserción que viola UNIQUE.
+# Ejercicios de unidad06-insert
 
-## Reto
-Carga datos respetando orden de dependencias entre tablas.
+Resuelve la [práctica completa](../PRACTICA.md) y luego revisa las [soluciones razonadas](../SOLUCIONES.md). Entrega tu predicción, consulta o modelo, resultados y explicación de al menos un caso límite.
+
+[Volver a la unidad](../README.md)

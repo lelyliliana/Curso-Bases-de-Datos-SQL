@@ -1,9 +1,5 @@
-# Ejercicios — GROUP BY
-1. Productos por categoría.
-2. Total por pedido.
-3. Ventas por cliente.
-4. Categorías con más de N productos.
-5. Meses con ventas superiores a umbral.
+# Ejercicios de unidad13-group-having
 
-## Reto
-Escribe una consulta donde WHERE y HAVING sean ambos necesarios y explica el orden lógico.
+Resuelve la [práctica completa](../PRACTICA.md) y luego revisa las [soluciones razonadas](../SOLUCIONES.md). Entrega tu predicción, consulta o modelo, resultados y explicación de al menos un caso límite.
+
+[Volver a la unidad](../README.md)

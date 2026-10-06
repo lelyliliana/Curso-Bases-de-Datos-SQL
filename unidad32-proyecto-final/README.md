@@ -1,4 +1,4 @@
-# Unidad 32 — Proyecto final
+# Unidad 32: Proyecto final
 
 [Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
 
@@ -8,7 +8,7 @@ Demostrar que puedes pasar de un problema real a una base de datos reproducible,
 
 No empieces escribiendo tablas. Sigue las etapas.
 
-# Etapa 1 — Problema
+# Etapa 1: Problema
 
 Escribe:
 - contexto;
@@ -28,7 +28,7 @@ Ejemplos de dominios:
 
 Evita datos personales reales.
 
-# Etapa 2 — Reglas
+# Etapa 2: Reglas
 
 Documenta al menos diez reglas.
 
@@ -37,7 +37,7 @@ Ejemplo:
 
 > Un detalle tiene cantidad mayor que cero.
 
-# Etapa 3 — DER
+# Etapa 3: DER
 
 Construye modelo conceptual:
 - entidades;
@@ -47,7 +47,7 @@ Construye modelo conceptual:
 
 Valídalo contra escenarios.
 
-# Etapa 4 — Modelo relacional
+# Etapa 4: Modelo relacional
 
 Transforma a relaciones/tablas.
 
@@ -59,7 +59,7 @@ Define:
 - NOT NULL;
 - CHECK.
 
-# Etapa 5 — Normalización
+# Etapa 5: Normalización
 
 Elige al menos una parte del modelo y demuestra:
 - tabla/estructura problemática;
@@ -69,7 +69,7 @@ Elige al menos una parte del modelo y demuestra:
 
 No escribas solamente “está en 3FN”.
 
-# Etapa 6 — DDL
+# Etapa 6: DDL
 
 Crea scripts numerados:
 
@@ -84,7 +84,7 @@ Crea scripts numerados:
 
 Otra persona debe poder ejecutarlos en orden.
 
-# Etapa 7 — Datos de prueba
+# Etapa 7: Datos de prueba
 
 Crea datos que incluyan:
 - caso normal;
@@ -94,7 +94,7 @@ Crea datos que incluyan:
 
 No uses datos personales reales.
 
-# Etapa 8 — Consultas
+# Etapa 8: Consultas
 
 Incluye al menos:
 - filtros;
@@ -107,19 +107,19 @@ Incluye al menos:
 
 Cada consulta debe tener una pregunta asociada.
 
-# Etapa 9 — Vista
+# Etapa 9: Vista
 
 Crea una vista con propósito claro.
 
 Explica quién la usaría.
 
-# Etapa 10 — Transacción
+# Etapa 10: Transacción
 
 Implementa/demuestra una operación todo-o-nada.
 
 Prueba COMMIT y ROLLBACK en entorno controlado.
 
-# Etapa 11 — Índices y EXPLAIN
+# Etapa 11: Índices y EXPLAIN
 
 Selecciona consultas que puedan justificar optimización.
 
@@ -132,7 +132,7 @@ Captura:
 
 No es obligatorio que el índice gane: una conclusión “PostgreSQL prefirió Seq Scan por el tamaño/distribución” puede ser correcta si está sustentada.
 
-# Etapa 12 — Seguridad
+# Etapa 12: Seguridad
 
 Diseña al menos:
 - rol de lectura;
@@ -142,13 +142,13 @@ Aplica mínimo privilegio.
 
 No publiques credenciales reales.
 
-# Etapa 13 — Calidad/importación
+# Etapa 13: Calidad/importación
 
 Incluye una pequeña fuente externa ficticia o generada.
 
 Usa staging y produce un reporte de calidad.
 
-# Etapa 14 — Backup y restauración
+# Etapa 14: Backup y restauración
 
 Crea respaldo y restáuralo en otra base.
 
@@ -157,7 +157,7 @@ Verifica:
 - conteos;
 - consultas críticas.
 
-# Etapa 15 — README
+# Etapa 15: README
 
 Debe permitir a una persona nueva:
 1. instalar/reconocer requisitos;
@@ -197,9 +197,14 @@ Si una respuesta es dudosa, el proyecto aún no está terminado.
 
 ---
 
+## Material completo de aplicación
+
+Sigue la [práctica de entrega](PRACTICA.md), revisa los [criterios y soluciones](SOLUCIONES.md) y estudia el [proyecto biblioteca completo](../proyecto-biblioteca/README.md). Incluye operaciones y pruebas de préstamos, devoluciones, privilegios y solicitudes concurrentes.
+
 ## Continuar el curso
 
-- **Unidad anterior:** [Unidad 31 — Taller integrador de SQL](../unidad31-taller/README.md)
+- **Unidad anterior:** [Unidad 31: Taller integrador de SQL](../unidad31-taller/README.md)
 - **Volver al índice:** [Todas las unidades](../README.md)
 
 Llegaste a la última unidad. Revisa tu proyecto y la lista de comprobación antes de dar por terminado el curso.
+

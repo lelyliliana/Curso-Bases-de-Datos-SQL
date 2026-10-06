@@ -1,9 +1,13 @@
-# Unidad 26 — EXPLAIN y planes de ejecución
+# Unidad 26: EXPLAIN y planes de ejecución
 
 [Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
 
 ## Qué aprenderás
 Leer un plan básico, distinguir estimaciones de mediciones y utilizar EXPLAIN para comprobar hipótesis.
+
+## Cómo usar los ejemplos de esta unidad
+
+Los ejemplos breves ilustran una idea y pueden usar un conjunto reducido de filas o una tabla independiente. Para ejecutarlos juntos sin conflictos, utiliza el laboratorio y la práctica de esta unidad sobre la [tienda de referencia](../docs/CASO_TIENDA.md). Sus scripts declaran la preparación, resultados y rollback. No vuelvas a crear las tablas de tienda ni repitas su carga para seguir un fragmento ilustrativo.
 
 # 1. SQL describe qué quieres
 
@@ -151,8 +155,37 @@ Has completado el bloque de diseño y funcionamiento. Continúa con administraci
 
 ---
 
+## Laboratorio completo y lectura del resultado
+
+**Caso:** ¿Cómo distinguir estimación, ejecución real y costo sin inventar conclusiones?
+
+cost son unidades del optimizador, no milisegundos. Actual Rows y tiempos se muestran por ejecución del nodo; observa loops antes de interpretar trabajo total. BUFFERS distingue bloques encontrados en caché y leídos, no mide únicamente disco físico. Ejecutar dos veces favorece caché; repite y registra condiciones antes de atribuir toda la diferencia al índice.
+
+### Paso a paso
+
+1. Comprueba que estás en la base de práctica y que la [tienda](../docs/CASO_TIENDA.md) conserva sus datos iniciales.
+2. Abre [LABORATORIO.sql](LABORATORIO.sql). Lee el script antes de enviarlo al servidor.
+3. Predice el resultado de cada sentencia. Anota qué representa una fila y qué operaciones pueden cambiar datos.
+4. Desde la raíz, ejecuta:
+
+```text
+psql -X -h localhost -U estudiante -d curso_sql -v ON_ERROR_STOP=1 -f unidad26-explain/LABORATORIO.sql
+```
+
+La contraseña se solicita en la terminal; no la escribas en el repositorio.
+
+5. Compara con la referencia: **100 filas reales. Registra Node Type, Plan Rows, Actual Rows, Actual Loops, buffers y tiempo de ejecución en ambos planes.**
+6. Termina con la [práctica](PRACTICA.md), luego contrasta tus decisiones con las [soluciones razonadas](SOLUCIONES.md).
+
+### Transferir la idea a otro problema
+
+Obtén un plan de agregación por estado en la tienda. Explica por qué cinco filas no permiten demostrar una mejora de rendimiento.
+
+Explica cómo cambiarían los datos si aparece una fila adicional, una referencia ausente o un empate. Distingue una garantía del esquema de una suposición que solo cumple esta muestra. El objetivo es construir una respuesta justificable, no copiar una consulta sin entender su población.
+
 ## Continuar el curso
 
-- **Unidad anterior:** [Unidad 25 — Índices](../unidad25-indices/README.md)
+- **Unidad anterior:** [Unidad 25: Índices](../unidad25-indices/README.md)
 - **Volver al índice:** [Todas las unidades](../README.md)
-- **Siguiente unidad:** [Unidad 27 — Usuarios, roles y privilegios](../unidad27-seguridad/README.md)
+- **Siguiente unidad:** [Unidad 27: Usuarios, roles y privilegios](../unidad27-seguridad/README.md)
+

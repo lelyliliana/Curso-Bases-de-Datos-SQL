@@ -1,9 +1,13 @@
-# Unidad 29 — Backup y restauración
+# Unidad 29: Backup y restauración
 
 [Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
 
 ## Qué aprenderás
 Comprender que una copia solo es confiable cuando puede restaurarse y realizar un ciclo básico con herramientas PostgreSQL.
+
+## Cómo usar los ejemplos de esta unidad
+
+Los ejemplos breves ilustran una idea y pueden usar un conjunto reducido de filas o una tabla independiente. Para ejecutarlos juntos sin conflictos, utiliza el laboratorio y la práctica de esta unidad sobre la [tienda de referencia](../docs/CASO_TIENDA.md). Sus scripts declaran la preparación, resultados y rollback. No vuelvas a crear las tablas de tienda ni repitas su carga para seguir un fragmento ilustrativo.
 
 # 1. Tener un archivo no basta
 
@@ -60,7 +64,7 @@ pg_dump genera un respaldo lógico. No es equivalente a copiar arbitrariamente a
 
 PostgreSQL también tiene estrategias físicas/PITR para escenarios más avanzados, fuera del alcance básico de esta unidad.
 
-# 6. RPO y RTO — introducción
+# 6. RPO y RTO: introducción
 
 **RPO:** cuánto dato podrías aceptar perder medido en tiempo.
 
@@ -125,8 +129,41 @@ Continúa con calidad de datos.
 
 ---
 
+## Laboratorio completo y lectura del resultado
+
+**Caso:** ¿Qué inventario debes guardar antes de comprobar una restauración?
+
+Un SELECT de conteos prepara evidencia, no crea un backup. pg_dump y pg_restore son ejecutables de terminal, no SQL. El formato custom se restaura con pg_restore; un archivo SQL de formato plain se ejecuta con psql. pg_dump respalda una base pero no los roles globales ni toda la configuración del servidor. Restaurar en otra base evita sobrescribir el origen.
+
+### Paso a paso
+
+1. Comprueba que estás en la base de práctica y que la [tienda](../docs/CASO_TIENDA.md) conserva sus datos iniciales.
+2. Abre [LABORATORIO.sql](LABORATORIO.sql). Lee el script antes de enviarlo al servidor.
+3. Predice el resultado de cada sentencia. Anota qué representa una fila y qué operaciones pueden cambiar datos.
+4. Desde la raíz, ejecuta:
+
+```text
+psql -X -h localhost -U estudiante -d curso_sql -v ON_ERROR_STOP=1 -f unidad29-backup/LABORATORIO.sql
+```
+
+La contraseña se solicita en la terminal; no la escribas en el repositorio.
+
+5. Compara con la referencia: **categoria 4, cliente 4, detalle 5, pedido 5, producto 5; cuatro FK.**
+6. Termina con la [práctica](PRACTICA.md), luego contrasta tus decisiones con las [soluciones razonadas](SOLUCIONES.md).
+
+### Transferir la idea a otro problema
+
+Realiza el ciclo custom en otra base vacía y compara objetos, valores y un rechazo de FK.
+
+Explica cómo cambiarían los datos si aparece una fila adicional, una referencia ausente o un empate. Distingue una garantía del esquema de una suposición que solo cumple esta muestra. El objetivo es construir una respuesta justificable, no copiar una consulta sin entender su población.
+
+### Ampliación y experimentos
+
+[Procedimiento de respaldo y restauración](RESTAURACION.md).
+
 ## Continuar el curso
 
-- **Unidad anterior:** [Unidad 28 — Importación y exportación](../unidad28-import-export/README.md)
+- **Unidad anterior:** [Unidad 28: Importación y exportación](../unidad28-import-export/README.md)
 - **Volver al índice:** [Todas las unidades](../README.md)
-- **Siguiente unidad:** [Unidad 30 — Calidad y limpieza de datos](../unidad30-calidad/README.md)
+- **Siguiente unidad:** [Unidad 30: Calidad y limpieza de datos](../unidad30-calidad/README.md)
+

@@ -1,9 +1,13 @@
-# Unidad 21 — Integridad referencial
+# Unidad 21: Integridad referencial
 
 [Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
 
 ## Qué aprenderás
 Comprender qué garantiza una FK y decidir conscientemente qué debe ocurrir al modificar/eliminar filas relacionadas.
+
+## Cómo usar los ejemplos de esta unidad
+
+Los ejemplos breves ilustran una idea y pueden usar un conjunto reducido de filas o una tabla independiente. Para ejecutarlos juntos sin conflictos, utiliza el laboratorio y la práctica de esta unidad sobre la [tienda de referencia](../docs/CASO_TIENDA.md). Sus scripts declaran la preparación, resultados y rollback. No vuelvas a crear las tablas de tienda ni repitas su carga para seguir un fragmento ilustrativo.
 
 # 1. Una referencia debe existir
 
@@ -111,8 +115,37 @@ Continúa con vistas.
 
 ---
 
+## Laboratorio completo y lectura del resultado
+
+**Caso:** ¿Qué cambia al borrar un padre protegido o un pedido con CASCADE?
+
+El bloque interno captura solo la violación esperada y revierte ese intento. El script no se interrumpe ni oculta otros errores. NO ACTION puede diferirse si una FK es DEFERRABLE; RESTRICT no permite diferir esa comprobación. SET NULL requiere columnas que admitan NULL y un dominio compatible. CASCADE no sustituye una política de conservación de ventas.
+
+### Paso a paso
+
+1. Comprueba que estás en la base de práctica y que la [tienda](../docs/CASO_TIENDA.md) conserva sus datos iniciales.
+2. Abre [LABORATORIO.sql](LABORATORIO.sql). Lee el script antes de enviarlo al servidor.
+3. Predice el resultado de cada sentencia. Anota qué representa una fila y qué operaciones pueden cambiar datos.
+4. Desde la raíz, ejecuta:
+
+```text
+psql -X -h localhost -U estudiante -d curso_sql -v ON_ERROR_STOP=1 -f unidad21-integridad/LABORATORIO.sql
+```
+
+La contraseña se solicita en la terminal; no la escribas en el repositorio.
+
+5. Compara con la referencia: **Dos detalles antes, cero después de borrar pedido 1. Borrar cliente 2 provoca 23503. El rollback restaura todo.**
+6. Termina con la [práctica](PRACTICA.md), luego contrasta tus decisiones con las [soluciones razonadas](SOLUCIONES.md).
+
+### Transferir la idea a otro problema
+
+Comprueba que no puedes insertar un pedido para un cliente inexistente. Predice el SQLSTATE.
+
+Explica cómo cambiarían los datos si aparece una fila adicional, una referencia ausente o un empate. Distingue una garantía del esquema de una suposición que solo cumple esta muestra. El objetivo es construir una respuesta justificable, no copiar una consulta sin entender su población.
+
 ## Continuar el curso
 
-- **Unidad anterior:** [Unidad 20 — Normalización: 1FN, 2FN y 3FN](../unidad20-normalizacion/README.md)
+- **Unidad anterior:** [Unidad 20: Normalización: 1FN, 2FN y 3FN](../unidad20-normalizacion/README.md)
 - **Volver al índice:** [Todas las unidades](../README.md)
-- **Siguiente unidad:** [Unidad 22 — Vistas](../unidad22-vistas/README.md)
+- **Siguiente unidad:** [Unidad 22: Vistas](../unidad22-vistas/README.md)
+

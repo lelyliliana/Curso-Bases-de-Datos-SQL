@@ -1,4 +1,4 @@
-# Unidad 00 — Datos, información y bases de datos
+# Unidad 00: Datos, información y bases de datos
 
 [Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/bases-datos-sql/)
 
@@ -302,12 +302,27 @@ Debes poder marcar:
 - [ ] Entiendo por qué relacionar datos es diferente de guardarlos.
 - [ ] Puedo identificar problemas de duplicación e inconsistencia.
 
-Continúa con **Unidad 01 — Modelo relacional**.
+Continúa con **Unidad 01: Modelo relacional**.
 
 
 ---
 
+## Caso desarrollado: Datos con contexto, calidad y elección del gestor
+
+Una veterinaria recibe una hoja con propietario, teléfono, mascota, fecha y diagnóstico. El mismo propietario aparece por cada consulta y sus teléfonos discrepan. Define qué hechos existen, qué contexto necesitan las fechas y tres controles que aportarían valor.
+
+### Solución explicada
+
+La fecha debe indicar si corresponde a atención, registro o modificación. El diagnóstico describe una consulta, no una mascota para siempre. Identifica PROPIETARIO, MASCOTA, VETERINARIO y CONSULTA. Suponiendo un responsable actual por mascota, cada mascota pertenece a uno; cada consulta corresponde a una mascota y a un veterinario. Cambiar ese supuesto (custodia compartida o varios veterinarios) cambia las asociaciones. No inventes una única regla universal.
+
+Tres controles: referencias a mascotas existentes, validación de fechas/tipos y una actualización coherente del teléfono actual del propietario. Una transacción agrupa cambios, los permisos limitan quién modifica y un respaldo probado permite recuperar. Ninguno descubre por sí solo un teléfono que está equivocado pero tiene un formato válido. Una hoja pequeña de uso individual puede ser apropiada; un proceso compartido con historial y reglas requiere otras garantías.
+
+### Practicar y comprobar
+
+Resuelve la [práctica](PRACTICA.md) con tus propias reglas. Compara después con las [soluciones razonadas](SOLUCIONES.md). En estas unidades el trabajo es conceptual: instala PostgreSQL al llegar a la Unidad 04, sin adelantar SQL que todavía no necesitas.
+
 ## Continuar el curso
 
 - **Volver al índice:** [Todas las unidades](../README.md)
-- **Siguiente unidad:** [Unidad 01 — Modelo relacional](../unidad01-modelo-relacional/README.md)
+- **Siguiente unidad:** [Unidad 01: Modelo relacional](../unidad01-modelo-relacional/README.md)
+
