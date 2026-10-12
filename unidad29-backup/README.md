@@ -167,3 +167,10 @@ Explica cómo cambiarían los datos si aparece una fila adicional, una referenci
 - **Volver al índice:** [Todas las unidades](../README.md)
 - **Siguiente unidad:** [Unidad 30: Calidad y limpieza de datos](../unidad30-calidad/README.md)
 
+---
+
+### ¿Necesitas apoyo con este tema?
+
+Si te bloqueaste con la práctica, necesitas revisar tu entorno o adaptar lo aprendido a tu proyecto, podemos trabajarlo en una sesión personalizada.
+
+[**Solicitar asesoría para este tema por WhatsApp**](https://wa.me/573103618296?text=Hola%2C%20Leli.%20Estoy%20estudiando%20Unidad%2029%20%E2%80%94%20Backup%20y%20restauraci%C3%B3n%20del%20curso%20Bases%20de%20Datos%20y%20SQL%20desde%20cero%20%28https%3A%2F%2Fgithub.com%2Flelyliliana%2FCurso-Bases-de-Datos-SQL%2Ftree%2Fmain%2Funidad29-backup%29%20y%20necesito%20una%20asesor%C3%ADa%20personalizada.%20Mi%20duda%20es%E2%80%A6)
